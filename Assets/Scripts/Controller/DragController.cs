@@ -6,6 +6,11 @@ public class DragController : MonoBehaviour
 {
 	[Header("Item")]
 	GameObject selectedItem = null;
+	GameObject highlightedZone = null;
+
+	[Header("Dragging Scales")]
+	[SerializeField] float grabbedScaleSpeed = 0.2f;
+	[SerializeField] Vector3 grabbedScale = new Vector3(1.1f, 1.1f, 1.1f);
 
 	// Start is called before the first frame update
 	void Start()
@@ -28,6 +33,7 @@ public class DragController : MonoBehaviour
 		{
 			Debug.Log("Hitting " + hit.transform.name);
 			selectedItem.transform.position = GetXZ(hit.point);
+			highlightedZone = hit.transform.gameObject;
 		}
 	}
 
@@ -72,10 +78,13 @@ public class DragController : MonoBehaviour
 	{
 		selectedItem = itemObject;
 		Debug.Log("Selecting Item");
+		LeanTween.scale(selectedItem, grabbedScale, grabbedScaleSpeed);
 	}
 
 	void DropItem()
 	{
+		LeanTween.scale(selectedItem, Vector3.one, grabbedScaleSpeed);
+		highlightedZone?.GetComponent<Zone>().AddItem(selectedItem.GetComponent<Item>());
 		selectedItem = null;
 	}
 }
