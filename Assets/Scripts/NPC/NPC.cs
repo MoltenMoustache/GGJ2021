@@ -9,6 +9,9 @@ public class NPC : MonoBehaviour
 
 	public void GetAndSendRequest()
 	{
+		// Chance to choose no item
+		// Check items that aren't in box, ask for one of those
+
 		desiredItem = ItemBox.GetUnclaimedItem(npcType);
 		if (desiredItem)
 			desiredItem.isClaimed = true;
