@@ -31,7 +31,6 @@ public class DragController : MonoBehaviour
 		int layerMask = 1 << 6;
 		if (selectedItem && Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out RaycastHit hit, Mathf.Infinity, ~layerMask))
 		{
-			Debug.Log("Hitting " + hit.transform.name);
 			selectedItem.transform.position = GetXZ(hit.point);
 			highlightedZone = hit.transform.gameObject;
 		}
@@ -77,7 +76,6 @@ public class DragController : MonoBehaviour
 	void SelectItem(GameObject itemObject)
 	{
 		selectedItem = itemObject;
-		Debug.Log("Selecting Item");
 		LeanTween.scale(selectedItem, grabbedScale, grabbedScaleSpeed);
 	}
 

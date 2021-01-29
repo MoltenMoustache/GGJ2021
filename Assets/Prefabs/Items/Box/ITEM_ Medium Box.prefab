@@ -108,3 +108,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55643b9d651b741469f0f48e3021eaad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  previousZone: {fileID: 0}
+  itemName: Box
+  conditionName: Medium
+  npcTypes: 
+  isClaimed: 0

@@ -15,7 +15,7 @@ public class ItemBox : Zone
 	List<Item> reservedItems = new List<Item>();
 
 	[SerializeField] List<Item> possibleItems = new List<Item>();
-	[Range(1, 10)]
+	[Range(1, 3)]
 	[SerializeField] int startingCount;
 
 	private void Start()
@@ -31,7 +31,9 @@ public class ItemBox : Zone
 
 	Item GenerateItem()
 	{
-		GameObject newItem = Instantiate(possibleItems[Random.Range(0, possibleItems.Count)].gameObject);
+		int index = Random.Range(0, possibleItems.Count);
+		GameObject newItem = Instantiate(possibleItems[index].gameObject);
+		possibleItems.RemoveAt(index);
 		newItem.transform.position = new Vector3(Random.Range(-7, 13), 1, Random.Range(-2.5f, -7));
 		return newItem.GetComponent<Item>();
 	}
@@ -42,6 +44,7 @@ public class ItemBox : Zone
 		{
 			if(instance.heldItems[i].npcTypes.Contains(npc) && !instance.heldItems[i].isClaimed)
 			{
+				Debug.Log("Returning item");
 				return instance.heldItems[i];
 			}
 		}

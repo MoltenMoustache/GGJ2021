@@ -4,20 +4,32 @@ using UnityEngine;
 
 public static class RequestHandler
 {
-	static Request currentRequest;
+	static Request currentRequest = null;
 
 	public static bool FulfillRequest(Item item)
 	{
+		bool result = false;
 		if (item == currentRequest.requestedItem)
-			return true;
-		else
-			return false;
+			result = true;
+
+		return result;
 	}
 
-	public static void SubmitRequest(Request request)
+	public static void SubmitRequest(Request request, bool logRequest = true)
 	{
-		if (currentRequest != null)
-			currentRequest = request;
+		currentRequest = request;
+		if (logRequest)
+		{
+			if (request.requestedItem != null)
+				Debug.Log("NPC is requesting '" + request.requestedItem.conditionName + " " + request.requestedItem.itemName + "'");
+			else
+				Debug.Log("NPC is requesting a non-existent item");
+		}
+	}
+
+	public static void CancelRequest()
+	{
+		currentRequest = null;
 	}
 }
 
