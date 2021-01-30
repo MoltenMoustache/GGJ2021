@@ -15,16 +15,8 @@ public class NPCZone : Zone
 	[SerializeField] float waitTimeMin, waitTimeMax;
 	GameObject previousNPC = null;
 
-	private void Start()
-	{
-		StartCoroutine(SpawnNextNPC());
-	}
-
-	private void Update()
-	{
-		if (Input.GetKeyDown(KeyCode.Space))
-			StartCoroutine(SpawnNextNPC());
-	}
+	int goal = -1;
+	int servedPatients = 0;
 
 	public override bool AddItem(Item item)
 	{
@@ -34,8 +26,12 @@ public class NPCZone : Zone
 			if (currentNPC.GiveItem(item))
 			{
 				LeanTween.scale(item.gameObject, Vector3.zero, 0.4f).setOnComplete(() => Destroy(item.gameObject));
-				StartCoroutine(SpawnNextNPC());
-				Debug.Log("Request Fulfilled");
+
+				servedPatients++;
+				if (servedPatients == goal)
+					GameController.NextDay();
+				else
+					StartCoroutine(SpawnNextNPC());
 				return true;
 			}
 			else
@@ -45,8 +41,12 @@ public class NPCZone : Zone
 				return false;
 			}
 		}
-
 		return false;
+	}
+
+	public void RepeatDialogue()
+	{
+		currentNPC.GetDialogue(DialogueType.Search);
 	}
 
 	IEnumerator SpawnNextNPC()
@@ -55,6 +55,7 @@ public class NPCZone : Zone
 		{
 			previousNPC = currentNPC.gameObject;
 			LeanTween.move(previousNPC, exitPoint.position, 1.5f).setOnComplete(() => Destroy(previousNPC));
+			currentNPC.GetDialogue(DialogueType.Goodbye);
 			PostProcessingHandler.SetFocusDistance(3, 1.5f);
 		}
 
@@ -65,7 +66,7 @@ public class NPCZone : Zone
 		// Generate NPC
 		currentNPC = Instantiate(npcPrefabs[Random.Range(0, npcPrefabs.Count)].gameObject, spawner.position, spawner.rotation).GetComponent<NPC>();
 
-		LeanTween.move(currentNPC.gameObject, boothPoint.position, 1.5f);
+		LeanTween.move(currentNPC.gameObject, boothPoint.position, 1.5f).setOnComplete(() => currentNPC.GetDialogue(DialogueType.Greeting));
 		PostProcessingHandler.SetFocusDistance(2, 1.5f);
 
 		// NPC Requests Item
@@ -73,5 +74,14 @@ public class NPCZone : Zone
 
 		// NPC Waits for item
 		canBeDropped = true;
+	}
+
+	public override void NextDay(Day day)
+	{
+		base.NextDay(day);
+		goal = day.peopleThisDay;
+		servedPatients = 0;
+
+		LeanTween.value(0, 1, 7.0f).setOnComplete(() => StartCoroutine(SpawnNextNPC()));
 	}
 }
