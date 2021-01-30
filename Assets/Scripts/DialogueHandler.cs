@@ -35,7 +35,6 @@ public class DialogueHandler : MonoBehaviour
 				LeanTween.cancel(instance.npcAlphaTweenID);
 
 			instance.dialogueNpc.text = dialogue;
-			Debug.Log(Screen.width);
 			LeanTween.moveX(instance.dialogueNpc.gameObject, 577, 3.0f).setFrom(620);
 			instance.npcAlphaTweenID = LeanTween.alphaCanvas(instance.npcCanvasGroup, 1, 1.2f).setFrom(0).setOnComplete(() => LeanTween.alphaCanvas(instance.npcCanvasGroup, 0, 1.8f).setFrom(1)).id;
 		}

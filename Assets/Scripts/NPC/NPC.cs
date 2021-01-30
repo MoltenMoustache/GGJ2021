@@ -15,7 +15,6 @@ public class NPC : MonoBehaviour
 		desiredItem = ItemBox.GetUnclaimedItem(npcType);
 		if (desiredItem)
 			desiredItem.isClaimed = true;
-		Debug.Log("Sending request...");
 		RequestHandler.SubmitRequest(new Request(desiredItem, this), true);
 	}
 

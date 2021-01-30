@@ -27,19 +27,10 @@ public class ItemBox : Zone
 	public void PopulateBox(int numberOfItems)
 	{
 		itemsToSpawn.Clear();
-
-		// Add current held items to spawn list
-		for (int i = 0; i < heldItems.Count; i++)
-			itemsToSpawn.Add(heldItems[i]);
+		heldItems.Clear();
 
 		// Create another pool to select from, removing selected items as the box populates
 		closedList = new List<Item>(itemPool);
-
-		// Remove held items from closed list
-		for (int i = 0; i < itemsToSpawn.Count; i++)
-		{
-			closedList.Remove(itemsToSpawn[i]);
-		}
 
 		// Add X items to spawn list, removing them from the closed list
 		for (int i = 0; i < numberOfItems; i++)

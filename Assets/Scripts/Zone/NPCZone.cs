@@ -32,8 +32,6 @@ public class NPCZone : Zone
 					GameController.NextDay();
 				else
 					StartCoroutine(SpawnNextNPC());
-
-				Debug.Log("Request Fulfilled");
 				return true;
 			}
 			else

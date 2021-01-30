@@ -11,9 +11,11 @@ GameObject:
   - component: {fileID: 4403621257728903640}
   - component: {fileID: 770983766574581373}
   - component: {fileID: 3267329572757418679}
-  m_Layer: 0
-  m_Name: White Watch
-  m_TagString: Untagged
+  - component: {fileID: -1561754617876717080}
+  - component: {fileID: 1151784023366454234}
+  m_Layer: 6
+  m_Name: ITEM_White Watch
+  m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -81,3 +83,40 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &-1561754617876717080
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3915632070394254178}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55643b9d651b741469f0f48e3021eaad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  previousZone: {fileID: 0}
+  itemName: Watch
+  conditionName: Silver
+  npcTypes: 
+  isClaimed: 0
+  canExamine: 0
+  pickupTime: 0.25
+  placementTime: 0.2
+  isExamining: 0
+  rotSpeed: 20
+  yOffset: -0.08
+--- !u!136 &1151784023366454234
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3915632070394254178}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.053631097
+  m_Height: 0.2748451
+  m_Direction: 2
+  m_Center: {x: 0.025274215, y: 0.050577667, z: 0.0018898994}
