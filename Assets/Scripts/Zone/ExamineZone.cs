@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class ExamineZone : Zone
 {
-	public override void AddItem(Item item)
+	public override bool AddItem(Item item)
 	{
 		base.AddItem(item);
 		item.canExamine = true;
+		return true;
 	}
 
 	public override void RemoveItem(Item item)

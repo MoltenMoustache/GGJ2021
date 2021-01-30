@@ -7,17 +7,22 @@ public class Zone : MonoBehaviour
 	protected List<Item> heldItems = new List<Item>();
 	protected bool canBeDropped = true;
 	public bool CanBeDropped { get { return canBeDropped; } }
-	[SerializeField] protected Vector3 zoneItemScale;
+	[SerializeField] protected Vector3 zoneItemRotation;
 
-	public virtual void AddItem(Item item)
+	public virtual bool AddItem(Item item)
 	{
 		if (canBeDropped)
 		{
 			item.previousZone?.RemoveItem(item);
 			item.previousZone = this;
+			LeanTween.rotate(item.gameObject, zoneItemRotation, 0.08f);
+			return true;
 		}
 		else
-			ZoneHandler.MoveItemToZone(item, ZoneHandler.BoxZone);
+		{
+			item.ReturnItem();
+			return false;
+		}
 	}
 
 	public virtual void RemoveItem(Item item)

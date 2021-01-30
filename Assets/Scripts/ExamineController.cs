@@ -59,7 +59,9 @@ public class ExamineController : MonoBehaviour
 	void ExitExamination()
 	{
 		examiningItem.ReturnItem();
+		examiningItem.isExamining = false;
 		PostProcessingHandler.SetFocusDistance(2, examineTime);
 		LeanTween.rotate(examiningItem.gameObject, baseRotation.eulerAngles, examineTime);
+		examiningItem = null;
 	}
 }

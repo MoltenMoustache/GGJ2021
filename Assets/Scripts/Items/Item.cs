@@ -24,10 +24,7 @@ public class Item : MonoBehaviour
 	void OnMouseDown()
 	{
 		if (!isExamining)
-		{
-			UpdateSavedPosition();
 			dragging = true;
-		}
 	}
 
 	void OnMouseUp()
@@ -43,15 +40,16 @@ public class Item : MonoBehaviour
 				Zone zone = hit.transform.GetComponent<Zone>();
 				if (zone)
 				{
-					LeanTween.move(gameObject, hit.point, DragController.PlacementTime);
-					zone.AddItem(this);
-					oldPosition = hit.point;
+					Vector3 pos = hit.point;
+					pos.y += (GetComponent<MeshFilter>().mesh.bounds.size.y / 2) - 0.1f;
+
+					LeanTween.move(gameObject, pos, DragController.PlacementTime);
+					if (zone.AddItem(this))
+						oldPosition = pos;
 				}
 			}
 			else
-			{
 				ReturnItem();
-			}
 		}
 	}
 
@@ -78,6 +76,11 @@ public class Item : MonoBehaviour
 		oldPosition = transform.position;
 	}
 
+	public void UpdateSavedPosition(Vector3 pos)
+	{
+		oldPosition = pos;
+	}
+
 	void Update()
 	{
 		if (dragging)
@@ -85,6 +88,18 @@ public class Item : MonoBehaviour
 			Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 			Vector3 rayPoint = ray.GetPoint(DragController.HoldDistance);
 			transform.position = rayPoint;
+		}
+	}
+
+	public void PlaceOnSurface()
+	{
+		int layerMask = 1 << 7;
+		if(Physics.Raycast(transform.position, Vector3.down, out RaycastHit hit, Mathf.Infinity, layerMask))
+		{
+			Vector3 surfacePoint = hit.point;
+			surfacePoint.y += (GetComponent<MeshFilter>().mesh.bounds.size.y / 2) - 0.1f;
+			transform.position = surfacePoint;
+			oldPosition = transform.position;
 		}
 	}
 }
