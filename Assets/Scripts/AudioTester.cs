@@ -17,13 +17,13 @@ public class AudioTester : MonoBehaviour
     }
 
     [ContextMenu("Fade Into Booth")]
-    private void FadeIntoBooth()
+    public void FadeIntoBooth()
     {
         audioFade.CrossFade(booth, boothVolume, fadeTime);
     }
 
     [ContextMenu("Fade Into WaitingRoom")]
-    private void FadeIntoWaitingRoom()
+    public void FadeIntoWaitingRoom()
     {
         audioFade.CrossFade(waitingRoom, waitingRoomAudio, fadeTime);
     }
