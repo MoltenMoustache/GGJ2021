@@ -34,7 +34,12 @@ public class GameController : MonoBehaviour
 
 	[SerializeField] List<Zone> zones = new List<Zone>();
 
-    public static void NextDay()
+	private void Start()
+	{
+		StartCoroutine(StartGame());
+	}
+
+	public static void NextDay()
 	{
 		instance.currentDay++;
 
@@ -58,5 +63,11 @@ public class GameController : MonoBehaviour
 		instance.dayTextbox.text = "Day " + (int)(instance.currentDay + 1);
 		instance.motdTextbox.text = instance.gameDays[instance.currentDay].motd;
 		LeanTween.alphaCanvas(instance.motdCanvasGroup, 1, 2.0f).setFrom(0).setOnComplete(() => LeanTween.value(0, 1, 8.0f).setOnComplete(() => LeanTween.alphaCanvas(instance.motdCanvasGroup, 0, 2.0f).setFrom(1)));
+	}
+
+	IEnumerator StartGame()
+	{
+		yield return new WaitForSeconds(5);
+		NextDay();
 	}
 }

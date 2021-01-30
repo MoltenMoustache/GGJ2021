@@ -3,6 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
+[System.Serializable]
+public struct NPCDialogue
+{
+	public NPCType npcType;
+	public DialogueType dialogueType;
+	public List<string> dialogue;
+}
+
 public class DialogueHandler : MonoBehaviour
 {
 	#region Singleton
@@ -21,11 +29,7 @@ public class DialogueHandler : MonoBehaviour
 	int npcAlphaTweenID = -12345;
 
 	[Header("Dialogue Types")]
-	[SerializeField] List<string> greetings = new List<string>();
-	[SerializeField] List<string> request = new List<string>();
-	[SerializeField] List<string> thank = new List<string>();
-	[SerializeField] List<string> search = new List<string>();
-	[SerializeField] List<string> goodbye = new List<string>();
+	[SerializeField] List<NPCDialogue> npcDialogue = new List<NPCDialogue>();
 
 	public static void SubmitDialogue(string dialogue, bool isNPC = true)
 	{
@@ -42,24 +46,18 @@ public class DialogueHandler : MonoBehaviour
 		{
 			instance.dialoguePlayer.text = dialogue;
 			LeanTween.moveX(instance.dialoguePlayer.gameObject, Screen.width * 0.27f, 0.8f);
-			LeanTween.alphaCanvas(instance.playerCanvasGroup, 1, 1.3f).setFrom(0).setOnComplete(()=>LeanTween.alphaCanvas(instance.playerCanvasGroup, 0, 1.5f).setFrom(1));
+			LeanTween.alphaCanvas(instance.playerCanvasGroup, 1, 1.3f).setFrom(0).setOnComplete(() => LeanTween.alphaCanvas(instance.playerCanvasGroup, 0, 1.5f).setFrom(1));
 		}
 	}
 
-	public static string GetDialogue(DialogueType type)
+	public static string GetDialogue(DialogueType type, NPCType npc)
 	{
-		switch (type)
+		for (int i = 0; i < instance.npcDialogue.Count; i++)
 		{
-			case DialogueType.Greeting:
-				return instance.greetings[Random.Range(0, instance.greetings.Count)];
-			case DialogueType.Goodbye:
-				return instance.goodbye[Random.Range(0, instance.goodbye.Count)];
-			case DialogueType.Thank:
-				return instance.thank[Random.Range(0, instance.thank.Count)];
-			case DialogueType.Search:
-				return instance.search[Random.Range(0, instance.search.Count)];
-			default:
-				return "NULL";
+			if (instance.npcDialogue[i].dialogueType == type && instance.npcDialogue[i].npcType == npc)
+				return instance.npcDialogue[i].dialogue[Random.Range(0, instance.npcDialogue[i].dialogue.Count)];
 		}
+
+		return string.Empty;
 	}
 }

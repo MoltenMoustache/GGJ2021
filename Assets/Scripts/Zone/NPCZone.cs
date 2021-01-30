@@ -44,6 +44,11 @@ public class NPCZone : Zone
 		return false;
 	}
 
+	public void RepeatDialogue()
+	{
+		currentNPC.GetDialogue(DialogueType.Search);
+	}
+
 	IEnumerator SpawnNextNPC()
 	{
 		if (currentNPC)
