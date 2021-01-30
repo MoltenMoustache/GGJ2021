@@ -55,6 +55,7 @@ public class NPCZone : Zone
 		{
 			previousNPC = currentNPC.gameObject;
 			LeanTween.move(previousNPC, exitPoint.position, 1.5f).setOnComplete(() => Destroy(previousNPC));
+			currentNPC.GetDialogue(DialogueType.Goodbye);
 			PostProcessingHandler.SetFocusDistance(3, 1.5f);
 		}
 
@@ -65,7 +66,7 @@ public class NPCZone : Zone
 		// Generate NPC
 		currentNPC = Instantiate(npcPrefabs[Random.Range(0, npcPrefabs.Count)].gameObject, spawner.position, spawner.rotation).GetComponent<NPC>();
 
-		LeanTween.move(currentNPC.gameObject, boothPoint.position, 1.5f);
+		LeanTween.move(currentNPC.gameObject, boothPoint.position, 1.5f).setOnComplete(()=>currentNPC.GetDialogue(DialogueType.Greeting));
 		PostProcessingHandler.SetFocusDistance(2, 1.5f);
 
 		// NPC Requests Item

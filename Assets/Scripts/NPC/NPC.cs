@@ -23,6 +23,22 @@ public class NPC : MonoBehaviour
 	{
 		return RequestHandler.FulfillRequest(item);
 	}
+
+	public void GetDialogue(DialogueType type)
+	{
+		string dialogue = DialogueHandler.GetDialogue(type);
+
+		if (type == DialogueType.Greeting)
+				dialogue += ", " + DialogueHandler.GetDialogue(DialogueType.Search) + " " + desiredItem.conditionName + " " + desiredItem.itemName + ".";
+		else if (type == DialogueType.Goodbye)
+		{
+			int chance = 90;
+			if (Random.Range(1, 101) <= 80)
+				dialogue = DialogueHandler.GetDialogue(DialogueType.Thank) + ", " + dialogue.ToLower();
+		}
+
+		DialogueHandler.SubmitDialogue(dialogue);
+	}
 }
 
 public enum NPCType
@@ -31,4 +47,13 @@ public enum NPCType
 	Old,
 	Biker,
 	Generic,
+}
+
+public enum DialogueType
+{
+	Greeting,
+	Goodbye,
+	Thank,
+	Angry,
+	Search,
 }
