@@ -20,6 +20,7 @@ public class Item : MonoBehaviour
 	Vector3 oldPosition;
 	public bool isExamining = false;
 	[SerializeField] float rotSpeed = 20;
+	[SerializeField] float yOffset;
 
 	void OnMouseDown()
 	{
@@ -41,7 +42,7 @@ public class Item : MonoBehaviour
 				if (zone)
 				{
 					Vector3 pos = hit.point;
-					pos.y += (GetComponent<MeshFilter>().mesh.bounds.size.y / 2) - 0.1f;
+					pos.y += (GetComponent<Collider>().bounds.extents.y) + yOffset;
 
 					LeanTween.move(gameObject, pos, DragController.PlacementTime);
 					if (zone.AddItem(this))
@@ -97,7 +98,7 @@ public class Item : MonoBehaviour
 		if(Physics.Raycast(transform.position, Vector3.down, out RaycastHit hit, Mathf.Infinity, layerMask))
 		{
 			Vector3 surfacePoint = hit.point;
-			surfacePoint.y += (GetComponent<MeshFilter>().mesh.bounds.size.y / 2) - 0.1f;
+			surfacePoint.y += (GetComponent<Collider>().bounds.extents.y) + yOffset;
 			transform.position = surfacePoint;
 			oldPosition = transform.position;
 		}

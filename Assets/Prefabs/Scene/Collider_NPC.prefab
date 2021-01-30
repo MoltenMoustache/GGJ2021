@@ -1,0 +1,73 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3401291581609954125
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3401291581609954126}
+  - component: {fileID: 3401291581609954127}
+  - component: {fileID: 3401291581609954124}
+  m_Layer: 7
+  m_Name: Collider_NPC
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3401291581609954126
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3401291581609954125}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.6, y: -0.094, z: 2.3270006}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &3401291581609954127
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3401291581609954125}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.1374185, y: 2.0623684, z: 0.32347465}
+  m_Center: {x: 0.5687088, y: 2.104652, z: -0.33826268}
+--- !u!114 &3401291581609954124
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3401291581609954125}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d8611dcf06633d478714988d145e5e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  zoneItemRotation: {x: 0, y: 0, z: 0}
+  npcPrefabs:
+  - {fileID: 3402259723730067294, guid: 90a7495897735934d8705ee8443cefbb, type: 3}
+  - {fileID: 3912927173576352719, guid: 2a26b9474ea901a4ba6ea2c2b7992a63, type: 3}
+  - {fileID: 7227625566301658464, guid: 36b4d3f17f7f0124a9271dd73e74cc6a, type: 3}
+  - {fileID: 3003253162203807935, guid: e094c12012623c441920c5755543dec6, type: 3}
+  - {fileID: 6190649223038070962, guid: d4a176ddf1461204dab92df2f53a9611, type: 3}
+  - {fileID: -237659535510255845, guid: ee13618cb61788443a2ca85a2b28c849, type: 3}
+  - {fileID: 3737838049724989884, guid: 29de2931a0de3ea4e8b9fcca45ee54e5, type: 3}
+  spawner: {fileID: 0}
+  boothPoint: {fileID: 0}
+  exitPoint: {fileID: 0}
+  waitTimeMin: 3
+  waitTimeMax: 6
