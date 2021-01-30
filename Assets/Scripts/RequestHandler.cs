@@ -12,6 +12,7 @@ public static class RequestHandler
 		if (item == currentRequest.requestedItem)
 			result = true;
 
+		ScoreHandler.SubmitRequest(result);
 		return result;
 	}
 
