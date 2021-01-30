@@ -29,4 +29,9 @@ public class Zone : MonoBehaviour
 	{
 		heldItems.Remove(item);
 	}
+
+	public virtual void NextDay(Day day)
+	{
+
+	}
 }

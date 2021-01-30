@@ -16,4 +16,9 @@ public class ExamineZone : Zone
 		item.canExamine = false;
 		base.RemoveItem(item);
 	}
+
+	public override void NextDay(Day day)
+	{
+		base.NextDay(day);
+	}
 }
