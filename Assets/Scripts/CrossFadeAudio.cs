@@ -119,9 +119,9 @@ public class CrossFadeAudio : MonoBehaviour
         }
 
         //perform the switching
-        newActiveSource.clip = playMe;
-        newActiveSource.Play();
-        newActiveSource.volume = 0;
+        //newActiveSource.clip = playMe;
+        //newActiveSource.Play();
+        //newActiveSource.volume = 0;
 
         if (_curSourceFadeRoutine != null)
         {

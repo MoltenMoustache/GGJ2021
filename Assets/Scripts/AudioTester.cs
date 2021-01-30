@@ -6,7 +6,7 @@ public class AudioTester : MonoBehaviour
 {
     [SerializeField] AudioClip waitingRoom, booth;
 
-    [SerializeField] float fadeTime = 1;
+    [SerializeField] float fadeTime = 1, boothVolume = 0.1f, waitingRoomAudio = 0.5f;
 
     private CrossFadeAudio audioFade;
 
@@ -19,12 +19,12 @@ public class AudioTester : MonoBehaviour
     [ContextMenu("Fade Into Booth")]
     private void FadeIntoBooth()
     {
-        audioFade.CrossFade(booth, 1, fadeTime);
+        audioFade.CrossFade(booth, boothVolume, fadeTime);
     }
 
     [ContextMenu("Fade Into WaitingRoom")]
     private void FadeIntoWaitingRoom()
     {
-        audioFade.CrossFade(waitingRoom, 0.5f, fadeTime);
+        audioFade.CrossFade(waitingRoom, waitingRoomAudio, fadeTime);
     }
 }

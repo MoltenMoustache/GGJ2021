@@ -11927,7 +11927,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh17468
+  m_Name: pb_Mesh96896
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -13258,8 +13258,8 @@ Camera:
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
   m_TargetEye: 3
-  m_HDR: 1
-  m_AllowMSAA: 1
+  m_HDR: 0
+  m_AllowMSAA: 0
   m_AllowDynamicResolution: 0
   m_ForceIntoRT: 0
   m_OcclusionCulling: 1
@@ -15879,7 +15879,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.499, y: -0.047}
+  m_AnchoredPosition: {x: -0.504, y: -0.047}
   m_SizeDelta: {x: 1.9656, y: 0.4914}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1141691299
@@ -16550,7 +16550,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh17408
+  m_Name: pb_Mesh96830
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -26201,7 +26201,7 @@ AudioSource:
   m_audioClip: {fileID: 8300000, guid: d9ad9ed279bee344fb956226b3cc27ee, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0
-  m_Pitch: 0.9
+  m_Pitch: 1
   Loop: 1
   Mute: 0
   Spatialize: 0
@@ -26296,8 +26296,8 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 2689638636180977079, guid: a7e73a29c5418db4ea0d4f4f41985cbf, type: 2}
   m_audioClip: {fileID: 8300000, guid: 643c6b8c88b00954cb19f821b1fac418, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.5
-  m_Pitch: 1
+  m_Volume: 0.3
+  m_Pitch: 0.9
   Loop: 1
   Mute: 0
   Spatialize: 0
@@ -26394,7 +26394,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waitingRoom: {fileID: 8300000, guid: 643c6b8c88b00954cb19f821b1fac418, type: 3}
   booth: {fileID: 8300000, guid: d9ad9ed279bee344fb956226b3cc27ee, type: 3}
-  fadeTime: 1
+  fadeTime: 1.5
+  boothVolume: 0.8
+  waitingRoomAudio: 0.3
 --- !u!4 &2103994012
 Transform:
   m_ObjectHideFlags: 0
