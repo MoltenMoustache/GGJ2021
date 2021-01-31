@@ -7385,7 +7385,7 @@ RectTransform:
   - {fileID: 797659019}
   - {fileID: 1719036243}
   m_Father: {fileID: 1549098933}
-  m_RootOrder: 6
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -15459,7 +15459,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh247300
+  m_Name: pb_Mesh578260
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -17476,7 +17476,7 @@ RectTransform:
   m_Children:
   - {fileID: 1868522201}
   m_Father: {fileID: 1549098933}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -18542,6 +18542,46 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7407631214715378368, guid: 35175f8b4b0546b4287b96b129476362, type: 3}
+      propertyPath: m_Size.y
+      value: 0.022039771
+      objectReference: {fileID: 0}
+    - target: {fileID: 7407631214715378368, guid: 35175f8b4b0546b4287b96b129476362, type: 3}
+      propertyPath: m_Size.z
+      value: 0.9942942
+      objectReference: {fileID: 0}
+    - target: {fileID: 7407631214715378368, guid: 35175f8b4b0546b4287b96b129476362, type: 3}
+      propertyPath: m_Center.y
+      value: 0.47679836
+      objectReference: {fileID: 0}
+    - target: {fileID: 7407631214715378368, guid: 35175f8b4b0546b4287b96b129476362, type: 3}
+      propertyPath: m_Center.z
+      value: 0.002852887
+      objectReference: {fileID: 0}
+    - target: {fileID: 7407631215361747930, guid: 35175f8b4b0546b4287b96b129476362, type: 3}
+      propertyPath: m_Size.y
+      value: 0.022000432
+      objectReference: {fileID: 0}
+    - target: {fileID: 7407631215361747930, guid: 35175f8b4b0546b4287b96b129476362, type: 3}
+      propertyPath: m_Center.x
+      value: 0.16327322
+      objectReference: {fileID: 0}
+    - target: {fileID: 7407631215361747930, guid: 35175f8b4b0546b4287b96b129476362, type: 3}
+      propertyPath: m_Center.y
+      value: 0.47681803
+      objectReference: {fileID: 0}
+    - target: {fileID: 7407631215708382186, guid: 35175f8b4b0546b4287b96b129476362, type: 3}
+      propertyPath: m_Size.y
+      value: 0.013653159
+      objectReference: {fileID: 0}
+    - target: {fileID: 7407631215708382186, guid: 35175f8b4b0546b4287b96b129476362, type: 3}
+      propertyPath: m_Center.x
+      value: 0.16327322
+      objectReference: {fileID: 0}
+    - target: {fileID: 7407631215708382186, guid: 35175f8b4b0546b4287b96b129476362, type: 3}
+      propertyPath: m_Center.y
+      value: 0.4735189
+      objectReference: {fileID: 0}
     - target: {fileID: 7407631215955583578, guid: 35175f8b4b0546b4287b96b129476362, type: 3}
       propertyPath: m_RootOrder
       value: 20
@@ -20917,7 +20957,7 @@ RectTransform:
   m_Children:
   - {fileID: 2016594373}
   m_Father: {fileID: 1549098933}
-  m_RootOrder: 3
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -23922,7 +23962,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh247198
+  m_Name: pb_Mesh578158
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -26314,7 +26354,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-440342
+  m_Name: pb_Mesh-4194256
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -29807,11 +29847,11 @@ RectTransform:
   m_Children:
   - {fileID: 1007579843}
   - {fileID: 962895298}
-  - {fileID: 1672918531}
-  - {fileID: 1079139044}
-  - {fileID: 1481635874}
-  - {fileID: 954122712}
   - {fileID: 253952220}
+  - {fileID: 1672918531}
+  - {fileID: 1481635874}
+  - {fileID: 1079139044}
+  - {fileID: 954122712}
   - {fileID: 2096713565}
   m_Father: {fileID: 0}
   m_RootOrder: 23
@@ -31017,7 +31057,7 @@ RectTransform:
   - {fileID: 57349880}
   - {fileID: 1348663969}
   m_Father: {fileID: 1549098933}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -32031,7 +32071,7 @@ PrefabInstance:
       objectReference: {fileID: 57349883}
     - target: {fileID: 1332704430569447929, guid: 472330ed608754b459d121583e577c83, type: 3}
       propertyPath: npcDialogue.Array.size
-      value: 10
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 1332704430569447929, guid: 472330ed608754b459d121583e577c83, type: 3}
       propertyPath: npcDialogue.Array.data[4].npcType
@@ -32058,6 +32098,30 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1332704430569447929, guid: 472330ed608754b459d121583e577c83, type: 3}
+      propertyPath: npcDialogue.Array.data[10].npcType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1332704430569447929, guid: 472330ed608754b459d121583e577c83, type: 3}
+      propertyPath: npcDialogue.Array.data[11].npcType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1332704430569447929, guid: 472330ed608754b459d121583e577c83, type: 3}
+      propertyPath: npcDialogue.Array.data[12].npcType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1332704430569447929, guid: 472330ed608754b459d121583e577c83, type: 3}
+      propertyPath: npcDialogue.Array.data[13].npcType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1332704430569447929, guid: 472330ed608754b459d121583e577c83, type: 3}
+      propertyPath: npcDialogue.Array.data[14].npcType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1332704430569447929, guid: 472330ed608754b459d121583e577c83, type: 3}
+      propertyPath: npcDialogue.Array.data[15].npcType
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1332704430569447929, guid: 472330ed608754b459d121583e577c83, type: 3}
       propertyPath: npcDialogue.Array.data[4].dialogueType
       value: 3
       objectReference: {fileID: 0}
@@ -32082,6 +32146,30 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1332704430569447929, guid: 472330ed608754b459d121583e577c83, type: 3}
+      propertyPath: npcDialogue.Array.data[10].dialogueType
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1332704430569447929, guid: 472330ed608754b459d121583e577c83, type: 3}
+      propertyPath: npcDialogue.Array.data[11].dialogueType
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1332704430569447929, guid: 472330ed608754b459d121583e577c83, type: 3}
+      propertyPath: npcDialogue.Array.data[12].dialogueType
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1332704430569447929, guid: 472330ed608754b459d121583e577c83, type: 3}
+      propertyPath: npcDialogue.Array.data[13].dialogueType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1332704430569447929, guid: 472330ed608754b459d121583e577c83, type: 3}
+      propertyPath: npcDialogue.Array.data[14].dialogueType
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1332704430569447929, guid: 472330ed608754b459d121583e577c83, type: 3}
+      propertyPath: npcDialogue.Array.data[15].dialogueType
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1332704430569447929, guid: 472330ed608754b459d121583e577c83, type: 3}
       propertyPath: npcDialogue.Array.data[1].dialogue.Array.size
       value: 2
       objectReference: {fileID: 0}
@@ -32099,15 +32187,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1332704430569447929, guid: 472330ed608754b459d121583e577c83, type: 3}
       propertyPath: npcDialogue.Array.data[5].dialogue.Array.size
-      value: 8
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 1332704430569447929, guid: 472330ed608754b459d121583e577c83, type: 3}
       propertyPath: npcDialogue.Array.data[6].dialogue.Array.size
-      value: 8
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 1332704430569447929, guid: 472330ed608754b459d121583e577c83, type: 3}
       propertyPath: npcDialogue.Array.data[7].dialogue.Array.size
-      value: 9
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 1332704430569447929, guid: 472330ed608754b459d121583e577c83, type: 3}
       propertyPath: npcDialogue.Array.data[8].dialogue.Array.size
@@ -32116,6 +32204,30 @@ PrefabInstance:
     - target: {fileID: 1332704430569447929, guid: 472330ed608754b459d121583e577c83, type: 3}
       propertyPath: npcDialogue.Array.data[9].dialogue.Array.size
       value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1332704430569447929, guid: 472330ed608754b459d121583e577c83, type: 3}
+      propertyPath: npcDialogue.Array.data[10].dialogue.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1332704430569447929, guid: 472330ed608754b459d121583e577c83, type: 3}
+      propertyPath: npcDialogue.Array.data[11].dialogue.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1332704430569447929, guid: 472330ed608754b459d121583e577c83, type: 3}
+      propertyPath: npcDialogue.Array.data[12].dialogue.Array.size
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1332704430569447929, guid: 472330ed608754b459d121583e577c83, type: 3}
+      propertyPath: npcDialogue.Array.data[13].dialogue.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1332704430569447929, guid: 472330ed608754b459d121583e577c83, type: 3}
+      propertyPath: npcDialogue.Array.data[14].dialogue.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1332704430569447929, guid: 472330ed608754b459d121583e577c83, type: 3}
+      propertyPath: npcDialogue.Array.data[15].dialogue.Array.size
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1332704430569447929, guid: 472330ed608754b459d121583e577c83, type: 3}
       propertyPath: npcDialogue.Array.data[0].dialogue.Array.data[1]
@@ -32187,34 +32299,38 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1332704430569447929, guid: 472330ed608754b459d121583e577c83, type: 3}
       propertyPath: npcDialogue.Array.data[5].dialogue.Array.data[0]
-      value: hey
+      value: heya
       objectReference: {fileID: 0}
     - target: {fileID: 1332704430569447929, guid: 472330ed608754b459d121583e577c83, type: 3}
       propertyPath: npcDialogue.Array.data[5].dialogue.Array.data[1]
-      value: excuse me
+      value: hey
       objectReference: {fileID: 0}
     - target: {fileID: 1332704430569447929, guid: 472330ed608754b459d121583e577c83, type: 3}
       propertyPath: npcDialogue.Array.data[5].dialogue.Array.data[2]
-      value: hello
+      value: excuse me
       objectReference: {fileID: 0}
     - target: {fileID: 1332704430569447929, guid: 472330ed608754b459d121583e577c83, type: 3}
       propertyPath: npcDialogue.Array.data[5].dialogue.Array.data[3]
-      value: hey you
+      value: hellooo
       objectReference: {fileID: 0}
     - target: {fileID: 1332704430569447929, guid: 472330ed608754b459d121583e577c83, type: 3}
       propertyPath: npcDialogue.Array.data[5].dialogue.Array.data[4]
-      value: morning
+      value: hey you
       objectReference: {fileID: 0}
     - target: {fileID: 1332704430569447929, guid: 472330ed608754b459d121583e577c83, type: 3}
       propertyPath: npcDialogue.Array.data[5].dialogue.Array.data[5]
-      value: g'moring
+      value: morning
       objectReference: {fileID: 0}
     - target: {fileID: 1332704430569447929, guid: 472330ed608754b459d121583e577c83, type: 3}
       propertyPath: npcDialogue.Array.data[5].dialogue.Array.data[6]
-      value: good morning
+      value: g'moring
       objectReference: {fileID: 0}
     - target: {fileID: 1332704430569447929, guid: 472330ed608754b459d121583e577c83, type: 3}
       propertyPath: npcDialogue.Array.data[5].dialogue.Array.data[7]
+      value: good morning
+      objectReference: {fileID: 0}
+    - target: {fileID: 1332704430569447929, guid: 472330ed608754b459d121583e577c83, type: 3}
+      propertyPath: npcDialogue.Array.data[5].dialogue.Array.data[8]
       value: ' '
       objectReference: {fileID: 0}
     - target: {fileID: 1332704430569447929, guid: 472330ed608754b459d121583e577c83, type: 3}
@@ -32235,23 +32351,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1332704430569447929, guid: 472330ed608754b459d121583e577c83, type: 3}
       propertyPath: npcDialogue.Array.data[6].dialogue.Array.data[4]
-      value: i know its here, give me my
-      objectReference: {fileID: 0}
-    - target: {fileID: 1332704430569447929, guid: 472330ed608754b459d121583e577c83, type: 3}
-      propertyPath: npcDialogue.Array.data[6].dialogue.Array.data[5]
       value: i think i left my
       objectReference: {fileID: 0}
     - target: {fileID: 1332704430569447929, guid: 472330ed608754b459d121583e577c83, type: 3}
-      propertyPath: npcDialogue.Array.data[6].dialogue.Array.data[6]
+      propertyPath: npcDialogue.Array.data[6].dialogue.Array.data[5]
       value: i forgot to get my
       objectReference: {fileID: 0}
     - target: {fileID: 1332704430569447929, guid: 472330ed608754b459d121583e577c83, type: 3}
-      propertyPath: npcDialogue.Array.data[6].dialogue.Array.data[7]
+      propertyPath: npcDialogue.Array.data[6].dialogue.Array.data[6]
       value: 'i lost my '
       objectReference: {fileID: 0}
     - target: {fileID: 1332704430569447929, guid: 472330ed608754b459d121583e577c83, type: 3}
+      propertyPath: npcDialogue.Array.data[6].dialogue.Array.data[7]
+      value: i may have forgotten my
+      objectReference: {fileID: 0}
+    - target: {fileID: 1332704430569447929, guid: 472330ed608754b459d121583e577c83, type: 3}
       propertyPath: npcDialogue.Array.data[6].dialogue.Array.data[8]
-      value: 'i lost my '
+      value: i left my
       objectReference: {fileID: 0}
     - target: {fileID: 1332704430569447929, guid: 472330ed608754b459d121583e577c83, type: 3}
       propertyPath: npcDialogue.Array.data[6].dialogue.Array.data[9]
@@ -32275,19 +32391,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1332704430569447929, guid: 472330ed608754b459d121583e577c83, type: 3}
       propertyPath: npcDialogue.Array.data[7].dialogue.Array.data[4]
-      value: have a lovely day
-      objectReference: {fileID: 0}
-    - target: {fileID: 1332704430569447929, guid: 472330ed608754b459d121583e577c83, type: 3}
-      propertyPath: npcDialogue.Array.data[7].dialogue.Array.data[5]
       value: later
       objectReference: {fileID: 0}
     - target: {fileID: 1332704430569447929, guid: 472330ed608754b459d121583e577c83, type: 3}
-      propertyPath: npcDialogue.Array.data[7].dialogue.Array.data[6]
+      propertyPath: npcDialogue.Array.data[7].dialogue.Array.data[5]
       value: catch
       objectReference: {fileID: 0}
     - target: {fileID: 1332704430569447929, guid: 472330ed608754b459d121583e577c83, type: 3}
-      propertyPath: npcDialogue.Array.data[7].dialogue.Array.data[7]
+      propertyPath: npcDialogue.Array.data[7].dialogue.Array.data[6]
       value: bye
+      objectReference: {fileID: 0}
+    - target: {fileID: 1332704430569447929, guid: 472330ed608754b459d121583e577c83, type: 3}
+      propertyPath: npcDialogue.Array.data[7].dialogue.Array.data[7]
+      value: ' '
       objectReference: {fileID: 0}
     - target: {fileID: 1332704430569447929, guid: 472330ed608754b459d121583e577c83, type: 3}
       propertyPath: npcDialogue.Array.data[7].dialogue.Array.data[8]
@@ -32356,6 +32472,166 @@ PrefabInstance:
     - target: {fileID: 1332704430569447929, guid: 472330ed608754b459d121583e577c83, type: 3}
       propertyPath: npcDialogue.Array.data[9].dialogue.Array.data[9]
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1332704430569447929, guid: 472330ed608754b459d121583e577c83, type: 3}
+      propertyPath: npcDialogue.Array.data[10].dialogue.Array.data[0]
+      value: mornin
+      objectReference: {fileID: 0}
+    - target: {fileID: 1332704430569447929, guid: 472330ed608754b459d121583e577c83, type: 3}
+      propertyPath: npcDialogue.Array.data[10].dialogue.Array.data[1]
+      value: good morning
+      objectReference: {fileID: 0}
+    - target: {fileID: 1332704430569447929, guid: 472330ed608754b459d121583e577c83, type: 3}
+      propertyPath: npcDialogue.Array.data[10].dialogue.Array.data[2]
+      value: hey, how are you
+      objectReference: {fileID: 0}
+    - target: {fileID: 1332704430569447929, guid: 472330ed608754b459d121583e577c83, type: 3}
+      propertyPath: npcDialogue.Array.data[10].dialogue.Array.data[3]
+      value: hello
+      objectReference: {fileID: 0}
+    - target: {fileID: 1332704430569447929, guid: 472330ed608754b459d121583e577c83, type: 3}
+      propertyPath: npcDialogue.Array.data[10].dialogue.Array.data[4]
+      value: hiya
+      objectReference: {fileID: 0}
+    - target: {fileID: 1332704430569447929, guid: 472330ed608754b459d121583e577c83, type: 3}
+      propertyPath: npcDialogue.Array.data[10].dialogue.Array.data[5]
+      value: i know i left it here somewhere
+      objectReference: {fileID: 0}
+    - target: {fileID: 1332704430569447929, guid: 472330ed608754b459d121583e577c83, type: 3}
+      propertyPath: npcDialogue.Array.data[10].dialogue.Array.data[6]
+      value: what? where is it then?
+      objectReference: {fileID: 0}
+    - target: {fileID: 1332704430569447929, guid: 472330ed608754b459d121583e577c83, type: 3}
+      propertyPath: npcDialogue.Array.data[10].dialogue.Array.data[7]
+      value: ugh
+      objectReference: {fileID: 0}
+    - target: {fileID: 1332704430569447929, guid: 472330ed608754b459d121583e577c83, type: 3}
+      propertyPath: npcDialogue.Array.data[10].dialogue.Array.data[8]
+      value: hmmm
+      objectReference: {fileID: 0}
+    - target: {fileID: 1332704430569447929, guid: 472330ed608754b459d121583e577c83, type: 3}
+      propertyPath: npcDialogue.Array.data[11].dialogue.Array.data[0]
+      value: i think i left my
+      objectReference: {fileID: 0}
+    - target: {fileID: 1332704430569447929, guid: 472330ed608754b459d121583e577c83, type: 3}
+      propertyPath: npcDialogue.Array.data[11].dialogue.Array.data[1]
+      value: i can't seem to find my
+      objectReference: {fileID: 0}
+    - target: {fileID: 1332704430569447929, guid: 472330ed608754b459d121583e577c83, type: 3}
+      propertyPath: npcDialogue.Array.data[11].dialogue.Array.data[2]
+      value: 'i forgot my '
+      objectReference: {fileID: 0}
+    - target: {fileID: 1332704430569447929, guid: 472330ed608754b459d121583e577c83, type: 3}
+      propertyPath: npcDialogue.Array.data[11].dialogue.Array.data[3]
+      value: i left my
+      objectReference: {fileID: 0}
+    - target: {fileID: 1332704430569447929, guid: 472330ed608754b459d121583e577c83, type: 3}
+      propertyPath: npcDialogue.Array.data[11].dialogue.Array.data[4]
+      value: i left my
+      objectReference: {fileID: 0}
+    - target: {fileID: 1332704430569447929, guid: 472330ed608754b459d121583e577c83, type: 3}
+      propertyPath: npcDialogue.Array.data[12].dialogue.Array.data[0]
+      value: thanks
+      objectReference: {fileID: 0}
+    - target: {fileID: 1332704430569447929, guid: 472330ed608754b459d121583e577c83, type: 3}
+      propertyPath: npcDialogue.Array.data[12].dialogue.Array.data[1]
+      value: thank you
+      objectReference: {fileID: 0}
+    - target: {fileID: 1332704430569447929, guid: 472330ed608754b459d121583e577c83, type: 3}
+      propertyPath: npcDialogue.Array.data[12].dialogue.Array.data[2]
+      value: thank you very much
+      objectReference: {fileID: 0}
+    - target: {fileID: 1332704430569447929, guid: 472330ed608754b459d121583e577c83, type: 3}
+      propertyPath: npcDialogue.Array.data[12].dialogue.Array.data[3]
+      value: ah
+      objectReference: {fileID: 0}
+    - target: {fileID: 1332704430569447929, guid: 472330ed608754b459d121583e577c83, type: 3}
+      propertyPath: npcDialogue.Array.data[12].dialogue.Array.data[4]
+      value: champion
+      objectReference: {fileID: 0}
+    - target: {fileID: 1332704430569447929, guid: 472330ed608754b459d121583e577c83, type: 3}
+      propertyPath: npcDialogue.Array.data[12].dialogue.Array.data[5]
+      value: nice
+      objectReference: {fileID: 0}
+    - target: {fileID: 1332704430569447929, guid: 472330ed608754b459d121583e577c83, type: 3}
+      propertyPath: npcDialogue.Array.data[12].dialogue.Array.data[6]
+      value: there we are
+      objectReference: {fileID: 0}
+    - target: {fileID: 1332704430569447929, guid: 472330ed608754b459d121583e577c83, type: 3}
+      propertyPath: npcDialogue.Array.data[13].dialogue.Array.data[0]
+      value: have a good one
+      objectReference: {fileID: 0}
+    - target: {fileID: 1332704430569447929, guid: 472330ed608754b459d121583e577c83, type: 3}
+      propertyPath: npcDialogue.Array.data[13].dialogue.Array.data[1]
+      value: cya
+      objectReference: {fileID: 0}
+    - target: {fileID: 1332704430569447929, guid: 472330ed608754b459d121583e577c83, type: 3}
+      propertyPath: npcDialogue.Array.data[13].dialogue.Array.data[2]
+      value: cyaaa
+      objectReference: {fileID: 0}
+    - target: {fileID: 1332704430569447929, guid: 472330ed608754b459d121583e577c83, type: 3}
+      propertyPath: npcDialogue.Array.data[13].dialogue.Array.data[3]
+      value: have a lovely day
+      objectReference: {fileID: 0}
+    - target: {fileID: 1332704430569447929, guid: 472330ed608754b459d121583e577c83, type: 3}
+      propertyPath: npcDialogue.Array.data[13].dialogue.Array.data[4]
+      value: i'll see you around
+      objectReference: {fileID: 0}
+    - target: {fileID: 1332704430569447929, guid: 472330ed608754b459d121583e577c83, type: 3}
+      propertyPath: npcDialogue.Array.data[13].dialogue.Array.data[5]
+      value: i'll see you around
+      objectReference: {fileID: 0}
+    - target: {fileID: 1332704430569447929, guid: 472330ed608754b459d121583e577c83, type: 3}
+      propertyPath: npcDialogue.Array.data[13].dialogue.Array.data[6]
+      value: there we are
+      objectReference: {fileID: 0}
+    - target: {fileID: 1332704430569447929, guid: 472330ed608754b459d121583e577c83, type: 3}
+      propertyPath: npcDialogue.Array.data[14].dialogue.Array.data[0]
+      value: check again maybe?
+      objectReference: {fileID: 0}
+    - target: {fileID: 1332704430569447929, guid: 472330ed608754b459d121583e577c83, type: 3}
+      propertyPath: npcDialogue.Array.data[14].dialogue.Array.data[1]
+      value: where did the hell did i leave it?
+      objectReference: {fileID: 0}
+    - target: {fileID: 1332704430569447929, guid: 472330ed608754b459d121583e577c83, type: 3}
+      propertyPath: npcDialogue.Array.data[14].dialogue.Array.data[2]
+      value: hmm
+      objectReference: {fileID: 0}
+    - target: {fileID: 1332704430569447929, guid: 472330ed608754b459d121583e577c83, type: 3}
+      propertyPath: npcDialogue.Array.data[14].dialogue.Array.data[3]
+      value: oh dear, where is it then?
+      objectReference: {fileID: 0}
+    - target: {fileID: 1332704430569447929, guid: 472330ed608754b459d121583e577c83, type: 3}
+      propertyPath: npcDialogue.Array.data[14].dialogue.Array.data[4]
+      value: where did I put it?
+      objectReference: {fileID: 0}
+    - target: {fileID: 1332704430569447929, guid: 472330ed608754b459d121583e577c83, type: 3}
+      propertyPath: npcDialogue.Array.data[14].dialogue.Array.data[5]
+      value: ugh
+      objectReference: {fileID: 0}
+    - target: {fileID: 1332704430569447929, guid: 472330ed608754b459d121583e577c83, type: 3}
+      propertyPath: npcDialogue.Array.data[15].dialogue.Array.data[0]
+      value: check again maybe?
+      objectReference: {fileID: 0}
+    - target: {fileID: 1332704430569447929, guid: 472330ed608754b459d121583e577c83, type: 3}
+      propertyPath: npcDialogue.Array.data[15].dialogue.Array.data[1]
+      value: where did the hell did i leave it?
+      objectReference: {fileID: 0}
+    - target: {fileID: 1332704430569447929, guid: 472330ed608754b459d121583e577c83, type: 3}
+      propertyPath: npcDialogue.Array.data[15].dialogue.Array.data[2]
+      value: hmm
+      objectReference: {fileID: 0}
+    - target: {fileID: 1332704430569447929, guid: 472330ed608754b459d121583e577c83, type: 3}
+      propertyPath: npcDialogue.Array.data[15].dialogue.Array.data[3]
+      value: oh dear, where is it then?
+      objectReference: {fileID: 0}
+    - target: {fileID: 1332704430569447929, guid: 472330ed608754b459d121583e577c83, type: 3}
+      propertyPath: npcDialogue.Array.data[15].dialogue.Array.data[4]
+      value: where did I put it?
+      objectReference: {fileID: 0}
+    - target: {fileID: 1332704430569447929, guid: 472330ed608754b459d121583e577c83, type: 3}
+      propertyPath: npcDialogue.Array.data[15].dialogue.Array.data[5]
+      value: ugh
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 472330ed608754b459d121583e577c83, type: 3}
@@ -34458,7 +34734,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-440344
+  m_Name: pb_Mesh-4194258
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -37695,7 +37971,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-446544
+  m_Name: pb_Mesh579170
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -40233,11 +40509,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8745517451373119100, guid: d08deb9e4f1f84849a383afd860a18ff, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.7819846
+      value: 0.7783509
       objectReference: {fileID: 0}
     - target: {fileID: 8745517451373119100, guid: d08deb9e4f1f84849a383afd860a18ff, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.6232978
+      value: -0.6278295
       objectReference: {fileID: 0}
     - target: {fileID: 8745517451373119100, guid: d08deb9e4f1f84849a383afd860a18ff, type: 3}
       propertyPath: m_LocalRotation.y
@@ -40249,7 +40525,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8745517451373119100, guid: d08deb9e4f1f84849a383afd860a18ff, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: -47.26
+      value: -77.78
       objectReference: {fileID: 0}
     - target: {fileID: 8745517451373119100, guid: d08deb9e4f1f84849a383afd860a18ff, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
