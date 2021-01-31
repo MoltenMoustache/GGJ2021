@@ -33,7 +33,7 @@ public class ItemBox : Zone
 
 		for (int i = 0; i < heldItems.Count; i++)
 		{
-			Destroy(heldItems[i]);
+			Destroy(heldItems[i].gameObject);
 		}
 		heldItems.Clear();
 

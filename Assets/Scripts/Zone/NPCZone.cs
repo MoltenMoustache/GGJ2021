@@ -27,11 +27,13 @@ public class NPCZone : Zone
 			{
 				LeanTween.scale(item.gameObject, Vector3.zero, 0.4f).setOnComplete(() => Destroy(item.gameObject));
 
+				//servedPatients++;
+				//if (servedPatients == goal)
+				//	GameController.NextDay();
+				//else
+
 				servedPatients++;
-				if (servedPatients == goal)
-					GameController.NextDay();
-				else
-					StartCoroutine(SpawnNextNPC());
+				StartCoroutine(SpawnNextNPC());
 				return true;
 			}
 			else
@@ -51,15 +53,12 @@ public class NPCZone : Zone
 
 	public void PlayerDoesntHaveIt()
 	{
-		if(!currentNPC.desiredItem.playerHasItem)
+		if (!currentNPC.desiredItem.playerHasItem)
 		{
 			RequestHandler.FulfillRequest(true);
 
 			servedPatients++;
-			if (servedPatients == goal)
-				GameController.NextDay();
-			else
-				StartCoroutine(SpawnNextNPC());
+			StartCoroutine(SpawnNextNPC());
 		}
 	}
 
@@ -69,27 +68,35 @@ public class NPCZone : Zone
 		{
 			previousNPC = currentNPC.gameObject;
 			LeanTween.move(previousNPC, exitPoint.position, 1.5f).setOnComplete(() => Destroy(previousNPC));
-			LeanTween.value(0, 1, 1.2f).setOnComplete(() => AudioTester.FadeIntoWaitingRoom());
+			if (servedPatients >= goal)
+				LeanTween.value(0, 1, 2.0f).setOnComplete(() => GameController.EndDay());
+			else
+				LeanTween.value(0, 1, 1.2f).setOnComplete(() => AudioTester.FadeIntoWaitingRoom());
 			currentNPC.GetDialogue(DialogueType.Goodbye);
 			PostProcessingHandler.SetFocusDistance(3, 1.5f);
 		}
 
-		currentNPC = null;
-		canBeDropped = false;
-		yield return new WaitForSeconds(Random.Range(waitTimeMin, waitTimeMax));
+		if (servedPatients < goal)
+		{
+			currentNPC = null;
+			canBeDropped = false;
+			yield return new WaitForSeconds(Random.Range(waitTimeMin, waitTimeMax));
 
-		// Generate NPC
-		currentNPC = Instantiate(npcPrefabs[Random.Range(0, npcPrefabs.Count)].gameObject, spawner.position, spawner.rotation).GetComponent<NPC>();
+			// Generate NPC
+			currentNPC = Instantiate(npcPrefabs[Random.Range(0, npcPrefabs.Count)].gameObject, spawner.position, spawner.rotation).GetComponent<NPC>();
 
-		LeanTween.move(currentNPC.gameObject, boothPoint.position, 1.5f).setOnComplete(() => currentNPC.GetDialogue(DialogueType.Greeting));
-		LeanTween.value(0, 1, 1.2f).setOnComplete(() => AudioTester.FadeIntoBooth());
-		PostProcessingHandler.SetFocusDistance(2, 1.5f);
+			LeanTween.move(currentNPC.gameObject, boothPoint.position, 1.5f).setOnComplete(() => currentNPC.GetDialogue(DialogueType.Greeting));
+			LeanTween.value(0, 1, 1.2f).setOnComplete(() => AudioTester.FadeIntoBooth());
+			PostProcessingHandler.SetFocusDistance(2, 1.5f);
 
-		// NPC Requests Item
-		currentNPC.GetAndSendRequest();
+			// NPC Requests Item
+			currentNPC.GetAndSendRequest();
 
-		// NPC Waits for item
-		canBeDropped = true;
+			// NPC Waits for item
+			canBeDropped = true;
+		}
+
+		yield return null;
 	}
 
 	public override void NextDay(Day day)
