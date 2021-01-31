@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 411052}
   - component: {fileID: 3395392}
   - component: {fileID: 2385872}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube.002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -92,7 +92,7 @@ GameObject:
   - component: {fileID: 422180}
   - component: {fileID: 3355556}
   - component: {fileID: 2329896}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -173,7 +173,7 @@ GameObject:
   - component: {fileID: 479402}
   - component: {fileID: 3323054}
   - component: {fileID: 2327392}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube.003
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -254,7 +254,7 @@ GameObject:
   - component: {fileID: 461500}
   - component: {fileID: 3385776}
   - component: {fileID: 2308682}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Plane.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -335,7 +335,7 @@ GameObject:
   - component: {fileID: 499166}
   - component: {fileID: 3376140}
   - component: {fileID: 2383222}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -415,7 +415,7 @@ GameObject:
   m_Component:
   - component: {fileID: 477328}
   - component: {fileID: 9593520}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Wheels (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -470,7 +470,7 @@ GameObject:
   - component: {fileID: 407598}
   - component: {fileID: 3378774}
   - component: {fileID: 2324590}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Plane.002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -551,7 +551,7 @@ GameObject:
   - component: {fileID: 444122}
   - component: {fileID: 3395634}
   - component: {fileID: 2332474}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Plane.004
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -630,9 +630,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 464892}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: ITEM_TOY_Truck
-  m_TagString: Untagged
+  m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -646,7 +646,7 @@ Transform:
   m_GameObject: {fileID: 179908}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 20.2, y: 1.5999764, z: -26.58}
-  m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
+  m_LocalScale: {x: 0.15, y: 0.15, z: 0.15}
   m_Children:
   - {fileID: 496448}
   - {fileID: 461500}
@@ -667,7 +667,7 @@ GameObject:
   - component: {fileID: 496448}
   - component: {fileID: 3360042}
   - component: {fileID: 2380936}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube.005_Cube.006
   m_TagString: Untagged
   m_Icon: {fileID: 0}
