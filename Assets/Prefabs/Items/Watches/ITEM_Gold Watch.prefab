@@ -98,7 +98,7 @@ MonoBehaviour:
   previousZone: {fileID: 0}
   itemName: Watch
   conditionName: Gold
-  npcTypes: 
+  npcTypes: 0100000003000000
   isClaimed: 0
   canExamine: 0
   pickupTime: 0.25

@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 7024944074471443518}
   - component: {fileID: 6256140894405395355}
   - component: {fileID: 8157903173789742929}
+  - component: {fileID: 7533574672375830998}
+  - component: {fileID: -2699752547168825210}
   m_Layer: 6
   m_Name: ITEM_Pearl Bracelet
   m_TagString: Item
@@ -81,3 +83,39 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &7533574672375830998
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7653390133444171396}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55643b9d651b741469f0f48e3021eaad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  previousZone: {fileID: 0}
+  itemName: Pearl Bracelet
+  conditionName: old
+  npcTypes: 01000000
+  isClaimed: 0
+  canExamine: 0
+  pickupTime: 0.25
+  placementTime: 0.2
+  isExamining: 0
+  rotSpeed: 20
+  yOffset: -0.08
+--- !u!65 &-2699752547168825210
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7653390133444171396}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.21569225, y: 0.04, z: 0.23825157}
+  m_Center: {x: 0.0000000037252903, y: 0, z: -0.0000000037252903}
