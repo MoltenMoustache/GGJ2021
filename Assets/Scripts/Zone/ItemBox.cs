@@ -23,6 +23,9 @@ public class ItemBox : Zone
 	[SerializeField] float yVal;
 	[SerializeField] Vector2 zMinMax;
 	[SerializeField] Vector3 eulerRot;
+	int chanceToNotHaveItem;
+
+	int maxNumberOfItemless;
 
 	public void PopulateBox(int numberOfItems)
 	{
@@ -62,15 +65,39 @@ public class ItemBox : Zone
 
 	public static Item GetUnclaimedItem(NPCType npc)
 	{
-		for (int i = 0; i < instance.heldItems.Count; i++)
+		if (instance.maxNumberOfItemless > 0 && Random.Range(1, 101) <= 20)
 		{
-			if (instance.heldItems[i] && !instance.heldItems[i].isClaimed)
+			return instance.GetNullItem();
+		}
+		else
+		{
+			for (int i = 0; i < instance.heldItems.Count; i++)
 			{
-				Debug.Log("Returning item");
-				return instance.heldItems[i];
+				if (instance.heldItems[i] && !instance.heldItems[i].isClaimed)
+				{
+					Debug.Log("Returning item");
+					return instance.heldItems[i];
+				}
 			}
 		}
-		return null;
+		return instance.GetNullItem();
+	}
+
+	Item GetNullItem()
+	{
+		Item item = null;
+		for (int i = 0; i < itemPool.Count; i++)
+		{
+			maxNumberOfItemless--;
+			if (!itemsToSpawn.Contains(itemPool[i]))
+			{
+				item = itemPool[i];
+				itemsToSpawn.Add(item);
+				item.playerHasItem = false;
+			}
+
+		}
+		return item;
 	}
 
 	public override void NextDay(Day day)
@@ -85,5 +112,6 @@ public class ItemBox : Zone
 
 		// Repopulate box excluding current items
 		PopulateBox(day.numberOfItems);
+		maxNumberOfItemless = day.maxNumberOfItemlessPatients;
 	}
 }

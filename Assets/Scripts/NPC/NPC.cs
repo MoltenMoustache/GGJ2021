@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class NPC : MonoBehaviour
 {
-	Item desiredItem;
+	[HideInInspector] public Item desiredItem;
 	[SerializeField] NPCType npcType;
 
 	public void GetAndSendRequest()
