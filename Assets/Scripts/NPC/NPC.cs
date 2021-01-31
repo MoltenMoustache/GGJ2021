@@ -62,4 +62,5 @@ public enum DialogueType
 	Thank,
 	Angry,
 	Search,
+	Dismiss,
 }
