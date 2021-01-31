@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class NPCZone : Zone
 {
+	bool isTutorial = false;
 
 	[Header("NPC's")]
 	NPC currentNPC;
@@ -30,12 +31,16 @@ public class NPCZone : Zone
 
 	public override bool AddItem(Item item)
 	{
-		base.AddItem(item);
 		if (canBeDropped)
 		{
+			if (!TutorialHandler.hasGivenItem)
+			{
+				TutorialHandler.StopAllTutorials();
+			}
+
 			if (currentNPC.GiveItem(item))
 			{
-				LeanTween.scale(item.gameObject, Vector3.zero, 0.4f).setOnComplete(() => Destroy(item.gameObject));
+				LeanTween.scale(item.gameObject, Vector3.zero, 0.4f).setOnComplete(() => DestroyNPCItem(item));
 
 				//servedPatients++;
 				//if (servedPatients == goal)
@@ -56,6 +61,12 @@ public class NPCZone : Zone
 			}
 		}
 		return false;
+	}
+
+	void DestroyNPCItem(Item item)
+	{
+		if (item != null)
+			Destroy(item.gameObject);
 	}
 
 	public void RepeatDialogue()
