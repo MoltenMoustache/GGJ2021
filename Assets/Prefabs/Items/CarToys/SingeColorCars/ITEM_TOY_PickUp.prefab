@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 466560}
   - component: {fileID: 3339640}
   - component: {fileID: 2365730}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_Cube.028
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -92,7 +92,7 @@ GameObject:
   - component: {fileID: 418816}
   - component: {fileID: 3318788}
   - component: {fileID: 2370500}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -172,7 +172,7 @@ GameObject:
   m_Component:
   - component: {fileID: 416310}
   - component: {fileID: 9525802}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Wheels (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -227,7 +227,7 @@ GameObject:
   - component: {fileID: 433308}
   - component: {fileID: 3353618}
   - component: {fileID: 2309206}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Plane
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -306,9 +306,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 432680}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: ITEM_TOY_PickUp
-  m_TagString: Untagged
+  m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -345,7 +345,7 @@ GameObject:
   - component: {fileID: 403706}
   - component: {fileID: 3373012}
   - component: {fileID: 2383678}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Plane.002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -426,7 +426,7 @@ GameObject:
   - component: {fileID: 445254}
   - component: {fileID: 3389460}
   - component: {fileID: 2383060}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -507,7 +507,7 @@ GameObject:
   - component: {fileID: 402218}
   - component: {fileID: 3376064}
   - component: {fileID: 2331308}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube.003
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -587,7 +587,7 @@ GameObject:
   m_Component:
   - component: {fileID: 463474}
   - component: {fileID: 9578556}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Wheels (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -642,7 +642,7 @@ GameObject:
   - component: {fileID: 465774}
   - component: {fileID: 3361804}
   - component: {fileID: 2335602}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube.002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -723,7 +723,7 @@ GameObject:
   - component: {fileID: 436126}
   - component: {fileID: 3331806}
   - component: {fileID: 2327116}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube.003
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -804,7 +804,7 @@ GameObject:
   - component: {fileID: 403798}
   - component: {fileID: 3393366}
   - component: {fileID: 2392504}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -885,7 +885,7 @@ GameObject:
   - component: {fileID: 494860}
   - component: {fileID: 3358266}
   - component: {fileID: 2384384}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube.002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -966,7 +966,7 @@ GameObject:
   - component: {fileID: 442198}
   - component: {fileID: 3317144}
   - component: {fileID: 2356562}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Plane.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1047,7 +1047,7 @@ GameObject:
   - component: {fileID: 435124}
   - component: {fileID: 3307688}
   - component: {fileID: 2367064}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1128,7 +1128,7 @@ GameObject:
   - component: {fileID: 496306}
   - component: {fileID: 3383620}
   - component: {fileID: 2324036}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Plane.003
   m_TagString: Untagged
   m_Icon: {fileID: 0}

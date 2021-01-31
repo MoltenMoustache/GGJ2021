@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 465226}
   - component: {fileID: 3321672}
   - component: {fileID: 2328370}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube.002_Cube.003
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -92,7 +92,7 @@ GameObject:
   - component: {fileID: 482024}
   - component: {fileID: 3392704}
   - component: {fileID: 2336814}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -173,7 +173,7 @@ GameObject:
   - component: {fileID: 463624}
   - component: {fileID: 3303022}
   - component: {fileID: 2366354}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube.002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -254,7 +254,7 @@ GameObject:
   - component: {fileID: 414982}
   - component: {fileID: 3385960}
   - component: {fileID: 2361586}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube.003
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -335,7 +335,7 @@ GameObject:
   - component: {fileID: 452666}
   - component: {fileID: 3365768}
   - component: {fileID: 2300420}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_Cube.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -415,7 +415,7 @@ GameObject:
   m_Component:
   - component: {fileID: 466884}
   - component: {fileID: 9588190}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Wheels
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -470,7 +470,7 @@ GameObject:
   - component: {fileID: 439420}
   - component: {fileID: 3369960}
   - component: {fileID: 2343570}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube.003_Cube.004
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -551,7 +551,7 @@ GameObject:
   - component: {fileID: 494422}
   - component: {fileID: 3368748}
   - component: {fileID: 2365648}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -632,7 +632,7 @@ GameObject:
   - component: {fileID: 415730}
   - component: {fileID: 3335408}
   - component: {fileID: 2315950}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube.001_Cube.002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -711,9 +711,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 463874}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: ITEM_TOY_Bug
-  m_TagString: Untagged
+  m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
