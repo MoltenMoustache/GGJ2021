@@ -16895,65 +16895,13 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1552120605}
     - target: {fileID: 3401291581609954124, guid: ddd88592807b7814fb48bf09d8e7086d, type: 3}
-      propertyPath: npcPrefabs.Array.size
-      value: 14
-      objectReference: {fileID: 0}
-    - target: {fileID: 3401291581609954124, guid: ddd88592807b7814fb48bf09d8e7086d, type: 3}
-      propertyPath: npcPrefabs.Array.data[0]
+      propertyPath: repeatButtonCanvas
       value: 
-      objectReference: {fileID: 8953802778511241877, guid: 9464774ba02785645a41322ea49d33a4, type: 3}
+      objectReference: {fileID: 1760411675}
     - target: {fileID: 3401291581609954124, guid: ddd88592807b7814fb48bf09d8e7086d, type: 3}
-      propertyPath: npcPrefabs.Array.data[1]
+      propertyPath: dismissButtonCanvas
       value: 
-      objectReference: {fileID: 7227625566301658464, guid: 36b4d3f17f7f0124a9271dd73e74cc6a, type: 3}
-    - target: {fileID: 3401291581609954124, guid: ddd88592807b7814fb48bf09d8e7086d, type: 3}
-      propertyPath: npcPrefabs.Array.data[2]
-      value: 
-      objectReference: {fileID: 6865060730330615585, guid: 5d64ed29ce2bb444e89ea689416cb59d, type: 3}
-    - target: {fileID: 3401291581609954124, guid: ddd88592807b7814fb48bf09d8e7086d, type: 3}
-      propertyPath: npcPrefabs.Array.data[3]
-      value: 
-      objectReference: {fileID: 3003253162203807935, guid: e094c12012623c441920c5755543dec6, type: 3}
-    - target: {fileID: 3401291581609954124, guid: ddd88592807b7814fb48bf09d8e7086d, type: 3}
-      propertyPath: npcPrefabs.Array.data[4]
-      value: 
-      objectReference: {fileID: 8383842212217265634, guid: 2f1ea30c4f3ed1c4fa0fe718d09223f6, type: 3}
-    - target: {fileID: 3401291581609954124, guid: ddd88592807b7814fb48bf09d8e7086d, type: 3}
-      propertyPath: npcPrefabs.Array.data[5]
-      value: 
-      objectReference: {fileID: 6190649223038070962, guid: d4a176ddf1461204dab92df2f53a9611, type: 3}
-    - target: {fileID: 3401291581609954124, guid: ddd88592807b7814fb48bf09d8e7086d, type: 3}
-      propertyPath: npcPrefabs.Array.data[6]
-      value: 
-      objectReference: {fileID: -237659535510255845, guid: ee13618cb61788443a2ca85a2b28c849, type: 3}
-    - target: {fileID: 3401291581609954124, guid: ddd88592807b7814fb48bf09d8e7086d, type: 3}
-      propertyPath: npcPrefabs.Array.data[7]
-      value: 
-      objectReference: {fileID: 3737838049724989884, guid: 29de2931a0de3ea4e8b9fcca45ee54e5, type: 3}
-    - target: {fileID: 3401291581609954124, guid: ddd88592807b7814fb48bf09d8e7086d, type: 3}
-      propertyPath: npcPrefabs.Array.data[8]
-      value: 
-      objectReference: {fileID: 59636486193864833, guid: 3edcb9acb05863f4fbdbec3b84699307, type: 3}
-    - target: {fileID: 3401291581609954124, guid: ddd88592807b7814fb48bf09d8e7086d, type: 3}
-      propertyPath: npcPrefabs.Array.data[9]
-      value: 
-      objectReference: {fileID: 3402259723730067294, guid: 90a7495897735934d8705ee8443cefbb, type: 3}
-    - target: {fileID: 3401291581609954124, guid: ddd88592807b7814fb48bf09d8e7086d, type: 3}
-      propertyPath: npcPrefabs.Array.data[10]
-      value: 
-      objectReference: {fileID: 3912927173576352719, guid: 2a26b9474ea901a4ba6ea2c2b7992a63, type: 3}
-    - target: {fileID: 3401291581609954124, guid: ddd88592807b7814fb48bf09d8e7086d, type: 3}
-      propertyPath: npcPrefabs.Array.data[11]
-      value: 
-      objectReference: {fileID: 5940787273756007392, guid: c98974ccc5219dd4e9727d2092f942ca, type: 3}
-    - target: {fileID: 3401291581609954124, guid: ddd88592807b7814fb48bf09d8e7086d, type: 3}
-      propertyPath: npcPrefabs.Array.data[12]
-      value: 
-      objectReference: {fileID: 4985950573782933625, guid: 10108385f1197144d868c1971077e9f3, type: 3}
-    - target: {fileID: 3401291581609954124, guid: ddd88592807b7814fb48bf09d8e7086d, type: 3}
-      propertyPath: npcPrefabs.Array.data[13]
-      value: 
-      objectReference: {fileID: 3871437779036922385, guid: eedf4e98e249b9148979ab12b6d64d7a, type: 3}
+      objectReference: {fileID: 1079139048}
     - target: {fileID: 3401291581609954125, guid: ddd88592807b7814fb48bf09d8e7086d, type: 3}
       propertyPath: m_Name
       value: Collider_NPC
@@ -20634,6 +20582,7 @@ GameObject:
   - component: {fileID: 1079139047}
   - component: {fileID: 1079139046}
   - component: {fileID: 1079139045}
+  - component: {fileID: 1079139048}
   m_Layer: 5
   m_Name: Decline Button
   m_TagString: Untagged
@@ -20755,6 +20704,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1079139043}
   m_CullTransparentMesh: 1
+--- !u!225 &1079139048
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1079139043}
+  m_Enabled: 1
+  m_Alpha: 0
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1001 &1080380828
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -33108,6 +33069,7 @@ GameObject:
   - component: {fileID: 1760411674}
   - component: {fileID: 1760411673}
   - component: {fileID: 1760411672}
+  - component: {fileID: 1760411675}
   m_Layer: 5
   m_Name: Repeat Button
   m_TagString: Untagged
@@ -33229,6 +33191,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1760411670}
   m_CullTransparentMesh: 1
+--- !u!225 &1760411675
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1760411670}
+  m_Enabled: 1
+  m_Alpha: 0
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &1764126710
 GameObject:
   m_ObjectHideFlags: 0

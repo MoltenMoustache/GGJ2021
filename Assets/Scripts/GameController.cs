@@ -51,6 +51,10 @@ public class GameController : MonoBehaviour
 
 	[SerializeField] List<Zone> zones = new List<Zone>();
 
+	[Header("Player Button")]
+	[SerializeField] CanvasGroup repeatButtonCanvas;
+	[SerializeField] CanvasGroup dismissButtonCanvas;
+
 	private void Start()
 	{
 		StartCoroutine(StartGame());

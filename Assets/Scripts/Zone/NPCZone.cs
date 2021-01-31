@@ -18,6 +18,16 @@ public class NPCZone : Zone
 	int goal = -1;
 	int servedPatients = 0;
 
+	[Min(0)]
+	[SerializeField] float secondsToLeaveMin;
+	[SerializeField] float secondsToLeaveMax;
+
+
+	[Header("Player Button")]
+	[SerializeField] CanvasGroup repeatButtonCanvas;
+	[SerializeField] CanvasGroup dismissButtonCanvas;
+	int repeatButtonTween, dismissButtonTween;
+
 	public override bool AddItem(Item item)
 	{
 		base.AddItem(item);
@@ -57,16 +67,22 @@ public class NPCZone : Zone
 		RequestHandler.FulfillRequest(!currentNPC.desiredItem.playerHasItem);
 
 		servedPatients++;
-		currentNPC.GetDialogue(DialogueType.Dismiss);
+		currentNPC.GetDialogue(DialogueType.Angry);
 		StartCoroutine(SpawnNextNPC());
 	}
 
 	IEnumerator SpawnNextNPC()
 	{
+		LeanTween.cancel(repeatButtonTween);
+		LeanTween.cancel(dismissButtonTween);
+
 		if (currentNPC)
 		{
 			previousNPC = currentNPC.gameObject;
-			LeanTween.move(previousNPC, exitPoint.position, 1.5f).setOnComplete(() => Destroy(previousNPC));
+			LeanTween.move(previousNPC, exitPoint.position, 1.5f).setOnComplete(() => Destroy(previousNPC)).setDelay(Random.Range(secondsToLeaveMin, secondsToLeaveMax));
+			LeanTween.alphaCanvas(dismissButtonCanvas, 0, 0.2f);
+			LeanTween.alphaCanvas(repeatButtonCanvas, 0, 0.2f);
+
 			if (servedPatients >= goal)
 				LeanTween.value(0, 1, 2.0f).setOnComplete(() => GameController.EndDay());
 			else
@@ -84,6 +100,8 @@ public class NPCZone : Zone
 			currentNPC = Instantiate(npcPrefabs[Random.Range(0, npcPrefabs.Count)].gameObject, spawner.position, spawner.rotation).GetComponent<NPC>();
 
 			LeanTween.move(currentNPC.gameObject, boothPoint.position, 1.5f).setOnComplete(() => currentNPC.GetDialogue(DialogueType.Greeting));
+			dismissButtonTween = LeanTween.alphaCanvas(dismissButtonCanvas, 1, 1f).setDelay(5f).id;
+			repeatButtonTween = LeanTween.alphaCanvas(repeatButtonCanvas, 1, 1f).setDelay(5f).id;
 			LeanTween.value(0, 1, 1.2f).setOnComplete(() => AudioTester.FadeIntoWaitingRoom());
 			PostProcessingHandler.SetFocusDistance(2, 1.5f);
 
