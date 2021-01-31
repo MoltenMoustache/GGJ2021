@@ -57,17 +57,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d8611dcf06633d478714988d145e5e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  heldItems: []
   zoneItemRotation: {x: 0, y: 0, z: 0}
   npcPrefabs:
-  - {fileID: 3402259723730067294, guid: 90a7495897735934d8705ee8443cefbb, type: 3}
-  - {fileID: 3912927173576352719, guid: 2a26b9474ea901a4ba6ea2c2b7992a63, type: 3}
+  - {fileID: 8953802778511241877, guid: 9464774ba02785645a41322ea49d33a4, type: 3}
   - {fileID: 7227625566301658464, guid: 36b4d3f17f7f0124a9271dd73e74cc6a, type: 3}
+  - {fileID: 6865060730330615585, guid: 5d64ed29ce2bb444e89ea689416cb59d, type: 3}
   - {fileID: 3003253162203807935, guid: e094c12012623c441920c5755543dec6, type: 3}
+  - {fileID: 8383842212217265634, guid: 2f1ea30c4f3ed1c4fa0fe718d09223f6, type: 3}
   - {fileID: 6190649223038070962, guid: d4a176ddf1461204dab92df2f53a9611, type: 3}
   - {fileID: -237659535510255845, guid: ee13618cb61788443a2ca85a2b28c849, type: 3}
   - {fileID: 3737838049724989884, guid: 29de2931a0de3ea4e8b9fcca45ee54e5, type: 3}
+  - {fileID: 59636486193864833, guid: 3edcb9acb05863f4fbdbec3b84699307, type: 3}
+  - {fileID: 3402259723730067294, guid: 90a7495897735934d8705ee8443cefbb, type: 3}
+  - {fileID: 3912927173576352719, guid: 2a26b9474ea901a4ba6ea2c2b7992a63, type: 3}
+  - {fileID: 5940787273756007392, guid: c98974ccc5219dd4e9727d2092f942ca, type: 3}
+  - {fileID: 4985950573782933625, guid: 10108385f1197144d868c1971077e9f3, type: 3}
+  - {fileID: 3871437779036922385, guid: eedf4e98e249b9148979ab12b6d64d7a, type: 3}
   spawner: {fileID: 0}
   boothPoint: {fileID: 0}
   exitPoint: {fileID: 0}
   waitTimeMin: 3
   waitTimeMax: 6
+  secondsToLeaveMin: 1
+  secondsToLeaveMax: 2
