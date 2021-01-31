@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 8899193922672494724}
   - component: {fileID: 5489767189575272225}
   - component: {fileID: 7767413469618009067}
+  - component: {fileID: 3152373349125607749}
+  - component: {fileID: 6323795219788708328}
   m_Layer: 6
   m_Name: ITEM_Glasses_01
   m_TagString: Item
@@ -81,3 +83,39 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &3152373349125607749
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8127758270653125182}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55643b9d651b741469f0f48e3021eaad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  previousZone: {fileID: 0}
+  itemName: Glasses
+  conditionName: Grey
+  npcTypes: 0100000003000000
+  isClaimed: 0
+  canExamine: 0
+  pickupTime: 0.25
+  placementTime: 0.2
+  isExamining: 0
+  rotSpeed: 20
+  yOffset: -0.08
+--- !u!65 &6323795219788708328
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8127758270653125182}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.19227222, y: 0.061915606, z: 0.18247983}
+  m_Center: {x: 0, y: 0.041704603, z: -0.012647241}

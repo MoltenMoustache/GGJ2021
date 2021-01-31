@@ -9,6 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 431494}
+  - component: {fileID: 5792305095319302936}
+  - component: {fileID: 7820277517485707495}
   m_Layer: 6
   m_Name: ITEM_TOY_MultipleCabriolet
   m_TagString: Item
@@ -37,6 +39,42 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5792305095319302936
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 109702}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55643b9d651b741469f0f48e3021eaad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  previousZone: {fileID: 0}
+  itemName: Toy Car
+  conditionName: Blue and Silver
+  npcTypes: 00000000
+  isClaimed: 0
+  canExamine: 0
+  pickupTime: 0.25
+  placementTime: 0.2
+  isExamining: 0
+  rotSpeed: 20
+  yOffset: -0.08
+--- !u!65 &7820277517485707495
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 109702}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.0793023, y: 0.7567477, z: 0.76016235}
+  m_Center: {x: -0.24752934, y: 0.3860684, z: 0.11991883}
 --- !u!1 &121334
 GameObject:
   m_ObjectHideFlags: 0

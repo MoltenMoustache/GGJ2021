@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 3112867370740676602}
   - component: {fileID: 2512993283939140726}
   - component: {fileID: 9124439886483944626}
+  - component: {fileID: 6146079455418874275}
+  - component: {fileID: 6384582229864425489}
   m_Layer: 6
   m_Name: ITEM_Phone
   m_TagString: Untagged
@@ -25,13 +27,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1145214836529793487}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0.70710576, y: -0, z: -0, w: 0.7071079}
   m_LocalPosition: {x: -0.037986122, y: 0.1229, z: 0.04704899}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!33 &2512993283939140726
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -82,3 +84,39 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &6146079455418874275
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1145214836529793487}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55643b9d651b741469f0f48e3021eaad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  previousZone: {fileID: 0}
+  itemName: Phone
+  conditionName: Black
+  npcTypes: 0300000002000000
+  isClaimed: 0
+  canExamine: 0
+  pickupTime: 0.25
+  placementTime: 0.2
+  isExamining: 0
+  rotSpeed: 20
+  yOffset: -0.08
+--- !u!65 &6384582229864425489
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1145214836529793487}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.1, y: 0.14368328, z: 0.025340557}
+  m_Center: {x: 0, y: -2.2949362e-15, z: 0.005621231}

@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 4438665167115368}
   - component: {fileID: 33639879297558196}
   - component: {fileID: 23986697955061332}
+  - component: {fileID: 1592694770884248943}
+  - component: {fileID: 997793101296725047}
   m_Layer: 6
   m_Name: ITEM_Camera
   m_TagString: Item
@@ -81,3 +83,39 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &1592694770884248943
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1951365995088226}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55643b9d651b741469f0f48e3021eaad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  previousZone: {fileID: 0}
+  itemName: Camera
+  conditionName: Black
+  npcTypes: 03000000
+  isClaimed: 0
+  canExamine: 0
+  pickupTime: 0.25
+  placementTime: 0.2
+  isExamining: 0
+  rotSpeed: 20
+  yOffset: -0.08
+--- !u!65 &997793101296725047
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1951365995088226}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.23425391, y: 0.17876583, z: 0.17507808}
+  m_Center: {x: -0.0016228743, y: 0.08918603, z: 0.028223982}
