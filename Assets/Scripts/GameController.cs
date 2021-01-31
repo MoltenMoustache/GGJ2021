@@ -50,6 +50,7 @@ public class GameController : MonoBehaviour
 	[SerializeField] CanvasGroup motdCanvasGroup;
 
 	[SerializeField] List<Zone> zones = new List<Zone>();
+	[SerializeField] NPCZone npcZone = null;
 
 
 	private void Start()
@@ -63,8 +64,7 @@ public class GameController : MonoBehaviour
 
 		instance.currentDay++;
 
-		for (int i = 0; i < instance.zones.Count; i++)
-			instance.zones[i].NextDay(instance.gameDays[instance.currentDay]);
+		instance.npcZone.NextDay(instance.gameDays[instance.currentDay]);
 
 		Debug.Log(instance.currentDay);
 	}
@@ -80,8 +80,15 @@ public class GameController : MonoBehaviour
 		{
 			instance.eodPanel.SetActive(true);
 			instance.DisplayMessageOfTheDay();
-			LeanTween.alphaCanvas(instance.motdCanvasGroup, 1, 2.5f).setOnComplete(() => LeanTween.alphaCanvas(instance.motdCanvasGroup, 0, 2.5f).setDelay(4.0f).setOnComplete(() => NextDay()));
+			LeanTween.alphaCanvas(instance.motdCanvasGroup, 1, 2.5f).setOnComplete(() => instance.ExecuteZones());
+			LeanTween.alphaCanvas(instance.motdCanvasGroup, 0, 2.5f).setDelay(6.5f).setOnComplete(() => NextDay());
 		}
+	}
+
+	void ExecuteZones()
+	{
+		for (int i = 0; i < instance.zones.Count; i++)
+			instance.zones[i].NextDay(instance.gameDays[instance.currentDay + 1]);
 	}
 
 	void GameOver()
@@ -119,7 +126,8 @@ public class GameController : MonoBehaviour
 
 	IEnumerator StartGame()
 	{
-		yield return new WaitForSeconds(0);
+		ExecuteZones();
+		yield return new WaitForSeconds(5);
 		NextDay();
 	}
 }

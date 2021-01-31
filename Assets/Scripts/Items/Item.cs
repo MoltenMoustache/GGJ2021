@@ -19,7 +19,7 @@ public class Item : MonoBehaviour
 	[SerializeField] float pickupTime = 0.25f;
 	[SerializeField] float placementTime = 0.2f;
 	Vector3 oldPosition;
-	[HideInInspector]  public bool isExamining = false;
+	[HideInInspector] public bool isExamining = false;
 	[SerializeField] float rotSpeed = 20;
 	[SerializeField] float yOffset;
 
@@ -27,6 +27,9 @@ public class Item : MonoBehaviour
 	{
 		if (!isExamining)
 			dragging = true;
+
+		if (!TutorialHandler.hasGrabbed)
+			TutorialHandler.hasGrabbed = true;
 	}
 
 	void OnMouseUp()
@@ -53,6 +56,13 @@ public class Item : MonoBehaviour
 			else
 				ReturnItem();
 		}
+
+		if (TutorialHandler.hasRotated && !TutorialHandler.hasExittedExamine)
+		{
+			GameObject exitTut = TutorialHandler.tutorial_ExitExamine;
+			exitTut.SetActive(true);
+			exitTut.transform.position = new Vector3(Screen.width / 2, Screen.height / 2, 0);
+		}
 	}
 
 	private void OnMouseDrag()
@@ -64,9 +74,33 @@ public class Item : MonoBehaviour
 
 			transform.RotateAround(Vector3.up, -rotX);
 			transform.RotateAround(Vector3.right, rotY);
+
+			if (!TutorialHandler.hasRotated)
+				TutorialHandler.hasRotated = true;
+			if (TutorialHandler.tutorial_Rotate.activeSelf)
+				TutorialHandler.tutorial_Rotate.SetActive(false);
 		}
 	}
 
+	private void OnMouseOver()
+	{
+		if (!TutorialHandler.hasGrabbed)
+		{
+			GameObject grabTut = TutorialHandler.tutorial_Grab;
+			if (!grabTut.activeSelf)
+				grabTut.SetActive(true);
+
+			grabTut.transform.position = Input.mousePosition;
+		}
+		else if (TutorialHandler.tutorial_Grab.activeSelf)
+			TutorialHandler.tutorial_Grab.SetActive(false);
+	}
+
+	private void OnMouseExit()
+	{
+		if (TutorialHandler.tutorial_Grab.activeSelf)
+			TutorialHandler.tutorial_Grab.SetActive(false);
+	}
 
 	public void ReturnItem()
 	{
@@ -90,13 +124,22 @@ public class Item : MonoBehaviour
 			Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 			Vector3 rayPoint = ray.GetPoint(DragController.HoldDistance);
 			transform.position = rayPoint;
+
+			if (!TutorialHandler.hasPutItemOnCounter)
+			{
+				GameObject tut = TutorialHandler.tutorial_Counter;
+				if (!tut.activeSelf)
+					tut.SetActive(true);
+				tut.transform.position = Input.mousePosition;
+			}
+
 		}
 	}
 
 	public void PlaceOnSurface()
 	{
 		int layerMask = 1 << 7;
-		if(Physics.Raycast(transform.position, Vector3.down, out RaycastHit hit, Mathf.Infinity, layerMask))
+		if (Physics.Raycast(transform.position, Vector3.down, out RaycastHit hit, Mathf.Infinity, layerMask))
 		{
 			Vector3 surfacePoint = hit.point;
 			surfacePoint.y += (GetComponent<Collider>().bounds.extents.y) + yOffset;

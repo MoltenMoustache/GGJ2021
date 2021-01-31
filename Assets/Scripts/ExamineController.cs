@@ -36,6 +36,11 @@ public class ExamineController : MonoBehaviour
 					Item item = hit.transform.GetComponent<Item>();
 					if (item.canExamine)
 					{
+						if (!TutorialHandler.hasExamined)
+							TutorialHandler.hasExamined = true;
+						if (TutorialHandler.tutorial_Examine.activeSelf)
+							TutorialHandler.tutorial_Examine.SetActive(false);
+
 						ExamineItem(item);
 					}
 				}
@@ -43,6 +48,14 @@ public class ExamineController : MonoBehaviour
 			else
 			{
 				ExitExamination();
+
+				if (!TutorialHandler.hasExittedExamine)
+					TutorialHandler.hasExittedExamine = true;
+				if (TutorialHandler.tutorial_ExitExamine.activeSelf)
+					TutorialHandler.tutorial_ExitExamine.SetActive(false);
+
+				if (!TutorialHandler.hasGivenItem)
+					TutorialHandler.tutorial_Give.SetActive(true);
 			}
 		}
 	}
@@ -54,6 +67,13 @@ public class ExamineController : MonoBehaviour
 		LeanTween.move(item.gameObject, examinePoint.position, examineTime);
 		PostProcessingHandler.SetFocusDistance(examineFocusDistance, examineTime);
 		item.isExamining = true;
+
+		if (!TutorialHandler.hasRotated)
+		{
+			GameObject rotateTut = TutorialHandler.tutorial_Rotate;
+			rotateTut.SetActive(true);
+			rotateTut.transform.position = new Vector3(Screen.width / 2, Screen.height / 2, 0);
+		}
 	}
 
 	void ExitExamination()

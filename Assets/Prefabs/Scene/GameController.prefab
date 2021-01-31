@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameDays:
-  - peopleThisDay: 10
+  - peopleThisDay: 1
     motd: A Clean Slate
     minNumberOfItemlessPatients: 0
     maxNumberOfItemlessPatients: 0
@@ -59,9 +59,24 @@ MonoBehaviour:
     minNumberOfItemlessPatients: 1
     maxNumberOfItemlessPatients: 3
     numberOfItems: 20
+  gameOverPanel: {fileID: 0}
+  gameOverCanvasGroup: {fileID: 0}
+  day1Return: {fileID: 0}
+  day1Dismissals: {fileID: 0}
+  day2Return: {fileID: 0}
+  day2Dismissals: {fileID: 0}
+  day3Return: {fileID: 0}
+  day3Dismissals: {fileID: 0}
+  returnToMenuCanvasGroup: {fileID: 0}
+  eodPanel: {fileID: 0}
   dayTextbox: {fileID: 0}
   motdTextbox: {fileID: 0}
+  successTextbox: {fileID: 0}
+  failTextbox: {fileID: 0}
   motdCanvasGroup: {fileID: 0}
   zones:
   - {fileID: 0}
   - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  npcZone: {fileID: 0}

@@ -8,6 +8,22 @@ public class ExamineZone : Zone
 	{
 		base.AddItem(item);
 		item.canExamine = true;
+
+		if (!TutorialHandler.hasPutItemOnCounter)
+		{
+			TutorialHandler.hasPutItemOnCounter = true;
+			TutorialHandler.tutorial_Counter.SetActive(false);
+		}
+
+		if (!TutorialHandler.hasExamined)
+		{
+			GameObject examTut = TutorialHandler.tutorial_Examine;
+			if (!examTut.activeSelf)
+				examTut.SetActive(true);
+
+			examTut.transform.position = new Vector3(Screen.width / 2, Screen.height / 2, 0);
+		}
+
 		return true;
 	}
 
