@@ -51,6 +51,7 @@ public class NPCZone : Zone
 			{
 				Debug.Log("Wrong Item");
 				item.ReturnItem();
+				currentNPC.GetDialogue(DialogueType.WrongItem);
 				return false;
 			}
 		}

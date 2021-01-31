@@ -20,5 +20,9 @@ public class ExamineZone : Zone
 	public override void NextDay(Day day)
 	{
 		base.NextDay(day);
+		for (int i = 0; i < heldItems.Count; i++)
+			Destroy(heldItems[i].gameObject);
+
+		heldItems.Clear();
 	}
 }
