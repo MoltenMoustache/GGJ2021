@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Zone : MonoBehaviour
 {
-	protected List<Item> heldItems = new List<Item>();
+	public List<Item> heldItems = new List<Item>();
 	protected bool canBeDropped = true;
 	public bool CanBeDropped { get { return canBeDropped; } }
 	[SerializeField] protected Vector3 zoneItemRotation;
@@ -15,6 +15,7 @@ public class Zone : MonoBehaviour
 		{
 			item.previousZone?.RemoveItem(item);
 			item.previousZone = this;
+			heldItems.Add(item);
 			LeanTween.rotate(item.gameObject, zoneItemRotation, 0.08f);
 			return true;
 		}

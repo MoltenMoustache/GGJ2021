@@ -4,7 +4,13 @@ using UnityEngine;
 
 public class AudioTester : MonoBehaviour
 {
-    [SerializeField] AudioClip waitingRoom, booth;
+    static AudioTester instance;
+	private void Awake()
+	{
+        instance = this;
+	}
+
+	[SerializeField] AudioClip waitingRoom, booth;
 
     [SerializeField] float fadeTime = 1, boothVolume = 0.1f, waitingRoomAudio = 0.5f;
 
@@ -17,14 +23,14 @@ public class AudioTester : MonoBehaviour
     }
 
     [ContextMenu("Fade Into Booth")]
-    public void FadeIntoBooth()
+    public static void FadeIntoBooth()
     {
-        audioFade.CrossFade(booth, boothVolume, fadeTime);
+        instance.audioFade.CrossFade(instance.booth, instance.boothVolume, instance.fadeTime);
     }
 
     [ContextMenu("Fade Into WaitingRoom")]
-    public void FadeIntoWaitingRoom()
+    public static void FadeIntoWaitingRoom()
     {
-        audioFade.CrossFade(waitingRoom, waitingRoomAudio, fadeTime);
+        instance.audioFade.CrossFade(instance.waitingRoom, instance.waitingRoomAudio, instance.fadeTime);
     }
 }

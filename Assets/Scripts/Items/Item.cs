@@ -10,7 +10,8 @@ public class Item : MonoBehaviour
 	public List<NPCType> npcTypes = new List<NPCType>();
 	public bool isClaimed = false;
 
-	public bool canExamine = false;
+	[HideInInspector] public bool canExamine = false;
+	[HideInInspector] public bool playerHasItem = true;
 
 	[Header("Movement")]
 	bool dragging = false;
@@ -18,7 +19,7 @@ public class Item : MonoBehaviour
 	[SerializeField] float pickupTime = 0.25f;
 	[SerializeField] float placementTime = 0.2f;
 	Vector3 oldPosition;
-	public bool isExamining = false;
+	[HideInInspector]  public bool isExamining = false;
 	[SerializeField] float rotSpeed = 20;
 	[SerializeField] float yOffset;
 
@@ -101,6 +102,7 @@ public class Item : MonoBehaviour
 			surfacePoint.y += (GetComponent<Collider>().bounds.extents.y) + yOffset;
 			transform.position = surfacePoint;
 			oldPosition = transform.position;
+			previousZone = hit.transform.GetComponent<Zone>();
 		}
 	}
 }

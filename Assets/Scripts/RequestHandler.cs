@@ -15,6 +15,15 @@ public static class RequestHandler
 		ScoreHandler.SubmitRequest(result);
 		return result;
 	}
+	public static bool FulfillRequest(bool playerDoesntHaveItem = true)
+	{
+		bool result = false;
+		if (playerDoesntHaveItem == currentRequest.requestedItem.playerHasItem)
+			result = true;
+
+		ScoreHandler.SubmitRequest(result);
+		return result;
+	}
 
 	public static void SubmitRequest(Request request, bool logRequest = true)
 	{
