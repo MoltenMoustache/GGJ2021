@@ -33,6 +33,7 @@ public class NPCZone : Zone
 				//else
 
 				servedPatients++;
+				currentNPC.GetDialogue(DialogueType.Goodbye);
 				StartCoroutine(SpawnNextNPC());
 				return true;
 			}
@@ -53,13 +54,11 @@ public class NPCZone : Zone
 
 	public void PlayerDoesntHaveIt()
 	{
-		if (!currentNPC.desiredItem.playerHasItem)
-		{
-			RequestHandler.FulfillRequest(true);
+		RequestHandler.FulfillRequest(!currentNPC.desiredItem.playerHasItem);
 
-			servedPatients++;
-			StartCoroutine(SpawnNextNPC());
-		}
+		servedPatients++;
+		currentNPC.GetDialogue(DialogueType.Dismiss);
+		StartCoroutine(SpawnNextNPC());
 	}
 
 	IEnumerator SpawnNextNPC()
@@ -71,8 +70,7 @@ public class NPCZone : Zone
 			if (servedPatients >= goal)
 				LeanTween.value(0, 1, 2.0f).setOnComplete(() => GameController.EndDay());
 			else
-				LeanTween.value(0, 1, 1.2f).setOnComplete(() => AudioTester.FadeIntoWaitingRoom());
-			currentNPC.GetDialogue(DialogueType.Goodbye);
+				LeanTween.value(0, 1, 1.2f).setOnComplete(() => AudioTester.FadeIntoBooth());
 			PostProcessingHandler.SetFocusDistance(3, 1.5f);
 		}
 
@@ -86,7 +84,7 @@ public class NPCZone : Zone
 			currentNPC = Instantiate(npcPrefabs[Random.Range(0, npcPrefabs.Count)].gameObject, spawner.position, spawner.rotation).GetComponent<NPC>();
 
 			LeanTween.move(currentNPC.gameObject, boothPoint.position, 1.5f).setOnComplete(() => currentNPC.GetDialogue(DialogueType.Greeting));
-			LeanTween.value(0, 1, 1.2f).setOnComplete(() => AudioTester.FadeIntoBooth());
+			LeanTween.value(0, 1, 1.2f).setOnComplete(() => AudioTester.FadeIntoWaitingRoom());
 			PostProcessingHandler.SetFocusDistance(2, 1.5f);
 
 			// NPC Requests Item
