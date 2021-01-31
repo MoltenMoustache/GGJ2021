@@ -98,7 +98,7 @@ MonoBehaviour:
   previousZone: {fileID: 0}
   itemName: Watch
   conditionName: Black
-  npcTypes: 
+  npcTypes: 010000000300000002000000
   isClaimed: 0
   canExamine: 0
   pickupTime: 0.25
