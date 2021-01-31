@@ -10,9 +10,11 @@ public static class RequestHandler
 	{
 		bool result = false;
 		if (item == currentRequest.requestedItem)
+		{
 			result = true;
+			ScoreHandler.SubmitRequest(true);
+		}
 
-		ScoreHandler.SubmitRequest(result);
 		return result;
 	}
 	public static bool FulfillRequest(bool playerDoesntHaveItem = true)
