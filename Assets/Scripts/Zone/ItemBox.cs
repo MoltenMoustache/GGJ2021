@@ -17,7 +17,7 @@ public class ItemBox : Zone
 
 	[SerializeField] List<Item> closedList;
 
-	List<Item> itemsToSpawn = new List<Item>();
+	public List<Item> itemsToSpawn = new List<Item>();
 	[Header("Spawning Area")]
 	[SerializeField] Vector2 xMinMax;
 	[SerializeField] float yVal;
@@ -30,6 +30,11 @@ public class ItemBox : Zone
 	public void PopulateBox(int numberOfItems)
 	{
 		itemsToSpawn.Clear();
+
+		for (int i = 0; i < heldItems.Count; i++)
+		{
+			Destroy(heldItems[i]);
+		}
 		heldItems.Clear();
 
 		// Create another pool to select from, removing selected items as the box populates
@@ -44,6 +49,12 @@ public class ItemBox : Zone
 		{
 			heldItems.Add(SpawnItem(i));
 		}
+	}
+
+	public void PrintCount()
+	{
+		Debug.Log("itemsToSpawn: " + itemsToSpawn.Count);
+		Debug.Log("closedList: " + closedList.Count);
 	}
 
 	Item SpawnItem(int index)
@@ -94,9 +105,13 @@ public class ItemBox : Zone
 				item = itemPool[i];
 				itemsToSpawn.Add(item);
 				item.playerHasItem = false;
+				break;
 			}
 
 		}
+
+		if (item == null)
+			Debug.LogWarning("Item returing NULL from GetNullItem()");
 		return item;
 	}
 

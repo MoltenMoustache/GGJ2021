@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class Item : MonoBehaviour
 {
-	[HideInInspector] public Zone previousZone;
+	public Zone previousZone;
 	public string itemName;
 	public string conditionName;
 	public List<NPCType> npcTypes = new List<NPCType>();
-	[HideInInspector]  public bool isClaimed = false;
+	public bool isClaimed = false;
 
 	[HideInInspector] public bool canExamine = false;
 	[HideInInspector] public bool playerHasItem = true;
@@ -102,6 +102,7 @@ public class Item : MonoBehaviour
 			surfacePoint.y += (GetComponent<Collider>().bounds.extents.y) + yOffset;
 			transform.position = surfacePoint;
 			oldPosition = transform.position;
+			previousZone = hit.transform.GetComponent<Zone>();
 		}
 	}
 }

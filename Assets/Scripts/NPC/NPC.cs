@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class NPC : MonoBehaviour
 {
-	[HideInInspector] public Item desiredItem;
+	public Item desiredItem;
 	[SerializeField] NPCType npcType;
 
 	public void GetAndSendRequest()
@@ -15,6 +15,9 @@ public class NPC : MonoBehaviour
 		desiredItem = ItemBox.GetUnclaimedItem(npcType);
 		if (desiredItem)
 			desiredItem.isClaimed = true;
+
+		if (desiredItem == null)
+			Debug.LogWarning("Item is NULL");
 		RequestHandler.SubmitRequest(new Request(desiredItem, this), true);
 	}
 
